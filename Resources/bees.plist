@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>bee1.png</key>
+		<dict>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {42, 36}}</string>
+			<key>offset</key>
+			<string>{-1, -0}</string>
+			<key>sourceSize</key>
+			<string>{42, 36}</string>
+			<key>frame</key>
+			<string>{{0, 0}, {42, 36}}</string>
+		</dict>
+		<key>bee2.png</key>
+		<dict>
+			<key>sourceColorRect</key>
+			<string>{{0, 9}, {44, 30}}</string>
+			<key>offset</key>
+			<string>{0, -4}</string>
+			<key>sourceSize</key>
+			<string>{44, 30}</string>
+			<key>frame</key>
+			<string>{{0, 48}, {44, 30}}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>1</integer>
+		<key>size</key>
+		<string>{64, 128}</string>
+	</dict>
+</dict>
+</plist>
