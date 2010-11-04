@@ -81,7 +81,7 @@ NSMutableArray* path;
     playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(playIdle:)] retain];
     
 		[bee runAction:[CCRepeatForever actionWithAction: idleAction]];
-    
+    [self move];
   }
 	return self;
 }
@@ -104,7 +104,8 @@ NSMutableArray* path;
 
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
   CGPoint point = [touch locationInView:[touch view]];
-  [path addObject:[NSValue 	valueWithCGPoint:point]];
+  id p = [NSValue valueWithCGPoint:point];
+  [path addObject:p];
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -114,22 +115,33 @@ NSMutableArray* path;
   
   NSValue* val = [path objectAtIndex:0];
   CGPoint p = [val CGPointValue];
+  
   CGPoint startingPoint;
   startingPoint.x = p.y;
   startingPoint.y = p.x;
   
   id action = [CCMoveTo actionWithDuration:0.5 position:startingPoint];
-  [bee runAction: [CCSequence actions:action, [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain], nil]];
+  id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
+  [bee runAction: [CCSequence actions:action, m, nil]];
+  [m release];
 }
 
 - (void)move {
+  CGPoint currentPosition = [bee position];
+  
   if ([path count] == 0) {
+    CGPoint random_point = ccp(rand() % 480, rand() % 320);
+    
+    [bee setFlipX:currentPosition.x > random_point.x];
+       
+    id action = [CCMoveTo actionWithDuration:2 position:random_point];
+    id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
+    [bee runAction: [CCSequence actions:action, m, nil]];
+    [m release];
     return;
   }
   
   [path removeObjectAtIndex:0];
-  
-  CGPoint currentPosition = [bee position];
    
   NSValue* val = [path objectAtIndex:0];
   CGPoint p = [val CGPointValue];
@@ -141,7 +153,9 @@ NSMutableArray* path;
   [bee setFlipX:currentPosition.x > p.y];
  
   id action = [CCMoveTo actionWithDuration:0.1 position:startingPoint];
-  [bee runAction: [CCSequence actions:action, [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain], nil]];
+  id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
+  [bee runAction: [CCSequence actions:action, m, nil]];
+  [m release];
 }
 
 // on "dealloc" you need to release all your retained objects

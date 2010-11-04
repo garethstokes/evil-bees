@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>E7AF93051281622F00340531</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>HelloWorldScene.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>E7AF93061281622F00340531</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>HelloWorldScene.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>E7AF940212821A1F00340531</string>
-						<key>history</key>
-						<array>
-							<string>E7AF93B912816FED00340531</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1405, 849}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>35 229 1405 890 0 0 2048 1130 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -368,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7AF940112821A1F00340531</string>
+										<string>E7AF946D128232ED00340531</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -581,7 +540,6 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7AF92C712815FFC00340531</string>
 		<string>/Users/garrydanger/projects/evil-bees/evil-bees.xcodeproj</string>
-		<string>E7AF93051281622F00340531</string>
 	</array>
 	<key>WindowString</key>
 	<string>368 227 1680 903 0 0 2048 1130 </string>
