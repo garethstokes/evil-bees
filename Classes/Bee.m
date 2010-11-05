@@ -11,7 +11,7 @@
 
 @implementation Bee
 
-@synthesize sprite;
+@synthesize sprite=_sprite;
 @synthesize animation;
 @synthesize sheet;
 @synthesize action;
@@ -29,8 +29,8 @@
   [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"bees.plist"];
   
   // Finally, create a sprite, using the name of a frame in our frame cache.
-  sprite = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
-  sprite.position = ccp( s.width/2-80, s.height/2);
+  _sprite = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
+  _sprite.position = ccp( s.width/2-80, s.height/2);
   
   NSMutableArray* idleFrames = [NSMutableArray array];
   [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee1.png"]];
@@ -41,8 +41,8 @@
   action = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]] retain];
   //playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(action)] retain];
   
-  [sheet addChild:sprite];  
-  [sprite runAction:[CCRepeatForever actionWithAction: action]];
+  [sheet addChild:_sprite];  
+  [_sprite runAction:[CCRepeatForever actionWithAction: action]];
   //[self explore];
   
   return [super init];
@@ -51,14 +51,14 @@
 - (void) explore {
   status = @"exploring...";
   
-  CGPoint currentPosition = [sprite position];
+  CGPoint currentPosition = [_sprite position];
   CGPoint random_point = ccp(rand() % 480, rand() % 320);
   
-  [sprite setFlipX:currentPosition.x > random_point.x];
+  [_sprite setFlipX:currentPosition.x > random_point.x];
   
   id a = [CCMoveTo actionWithDuration:2 position:random_point];
   id m = [[CCCallFunc actionWithTarget:self selector:@selector(explore)] retain];
-  [sprite runAction: [CCSequence actions:a, m, nil]];
+  [_sprite runAction: [CCSequence actions:a, m, nil]];
   [m release];
 }
 
@@ -74,12 +74,6 @@
 - (void)addPoint:(CGPoint)nextPoint {
   CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:nextPoint];
 
-  if (_sequence == nil) {
-    NSLog(@"We've don't have a sequence yet");
-  } else {
-    NSLog(@"We've already have a sequence");
-  }
-
   CCIntervalAction *prevAction;
 
   if (_sequence == nil) {
@@ -88,12 +82,13 @@
     prevAction = _sequence;
   }
 
-  NSLog(@"prevAction %@", prevAction);
   _sequence = [[CCSequence actionOne:prevAction two: nextAction] retain];
 }
 
 - (void)move {
-  [[self sprite] runAction: _sequence];
+  if (_sequence != nil) {
+    [_sprite runAction: _sequence];
+  }
 }
 
 @end

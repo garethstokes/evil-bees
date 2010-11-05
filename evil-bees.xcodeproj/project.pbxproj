@@ -226,6 +226,7 @@
 		E7AF92D61281609700340531 /* bees.zss in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D41281609700340531 /* bees.zss */; };
 		E7AF92D71281609700340531 /* bees.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D51281609700340531 /* bees.plist */; };
 		E7AF92E31281617F00340531 /* bees.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92E21281617F00340531 /* bees.png */; };
+		E7F720CA1282A98C00FDE9EC /* Bee.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F720C91282A98C00FDE9EC /* Bee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +459,8 @@
 		E7AF92D41281609700340531 /* bees.zss */ = {isa = PBXFileReference; lastKnownFileType = file; path = bees.zss; sourceTree = "<group>"; };
 		E7AF92D51281609700340531 /* bees.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bees.plist; sourceTree = "<group>"; };
 		E7AF92E21281617F00340531 /* bees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bees.png; sourceTree = "<group>"; };
+		E7F720C81282A98C00FDE9EC /* Bee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee.h; sourceTree = "<group>"; };
+		E7F720C91282A98C00FDE9EC /* Bee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,6 +554,8 @@
 				506EDC30102F528A00A389B3 /* HelloWorldScene.m */,
 				1F3B9A2C0EF2145700286867 /* evil_beesAppDelegate.h */,
 				1F3B9A2B0EF2145700286867 /* evil_beesAppDelegate.m */,
+				E7F720C81282A98C00FDE9EC /* Bee.h */,
+				E7F720C91282A98C00FDE9EC /* Bee.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1038,6 +1043,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1F3B9A2D0EF2145700286867 /* evil_beesAppDelegate.m in Sources */,
 				506EDC31102F528A00A389B3 /* HelloWorldScene.m in Sources */,
+				E7F720CA1282A98C00FDE9EC /* Bee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,9 +16,11 @@
 @interface HelloWorld : CCLayer {
 @private
   Bee *_bee;
+  Bee *_currentBee;
 }
 
 @property (nonatomic, retain) Bee *bee;
+@property (nonatomic, retain) Bee *currentBee;
 // returns a Scene that contains the HelloWorld as the only child
 +(id) scene;
 -(void) move;

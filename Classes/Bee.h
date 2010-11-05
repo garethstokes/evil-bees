@@ -10,12 +10,12 @@
 
 
 @interface Bee : NSObject {
-  CCSprite* sprite;
   CCAnimation* animation;
   CCSpriteSheet* sheet;
   CCAnimate* action;
   NSString* status;
 @private
+  CCSprite* _sprite;
   CCIntervalAction *_startAction;
   CCSequence *_sequence;
 }
@@ -27,6 +27,8 @@
 @property(nonatomic, retain) NSString* status;
 
 - (void) explore;
-- (void) moveTo:(CGPoint) point;
+- (void) startPoint:(CGPoint)startPoint;
+- (void) addPoint:(CGPoint)nextPoint;
+- (void) move;
 
 @end

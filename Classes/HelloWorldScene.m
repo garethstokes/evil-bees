@@ -18,6 +18,7 @@ CCLabel* status;
 @implementation HelloWorld
 
 @synthesize bee=_bee;
+@synthesize currentBee=_currentBee;
 
 +(id) scene
 {
@@ -75,21 +76,38 @@ CCLabel* status;
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  
   CGPoint point = [touch locationInView:[touch view]];
-  NSLog(@"ccTouchBegan %d, %d", point.y, point.x);
-  [_bee startPoint:CGPointMake(point.y, point.x)];
+  NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
+  CCSprite *sprite = [_bee sprite];
+
+  CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
+  NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
+  CGSize size = [sprite contentSize];
+  
+  if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) {
+    [_bee startPoint:CGPointMake(point.y, point.x)];
+    _currentBee = _bee;
+  }
+  
+  
   return YES;
 }
 
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-
+  if (_currentBee == nil) {
+    return;
+  }
+  
   CGPoint point = [touch locationInView:[touch view]];
-  NSLog(@"ccTouchMoved %d, %d", point.y, point.x);
-  [_bee addPoint:CGPointMake(point.y, point.x)];
+  //NSLog(@"ccTouchMoved %f, %f", point.y, point.x);
+  
+  [_currentBee addPoint:CGPointMake(point.y, point.x)];
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
   NSLog(@"ccTouchEnded");
-  [_bee move];
+  
+  [_currentBee move];
+  _currentBee = nil;
 }
 
 // on "dealloc" you need to release all your retained objects
