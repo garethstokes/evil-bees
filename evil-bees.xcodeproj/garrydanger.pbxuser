@@ -29,7 +29,7 @@
 			1D6058900D05DD3D006BFB54 /* evil-bees */,
 		);
 		breakpoints = (
-			E7F723571284232800FDE9EC /* Bee.m:86 */,
+			E7F723571284232800FDE9EC /* Bee.m:82 */,
 		);
 		codeSenseManager = E7AF92D312815FFC00340531 /* Code sense */;
 		executables = (
@@ -351,6 +351,14 @@
 			E7F723D412842F2400FDE9EC /* PBXTextBookmark */ = E7F723D412842F2400FDE9EC /* PBXTextBookmark */;
 			E7F72401128435B000FDE9EC /* PBXTextBookmark */ = E7F72401128435B000FDE9EC /* PBXTextBookmark */;
 			E7F72402128435B000FDE9EC /* PBXTextBookmark */ = E7F72402128435B000FDE9EC /* PBXTextBookmark */;
+			E7F7243812843CA400FDE9EC /* PBXTextBookmark */ = E7F7243812843CA400FDE9EC /* PBXTextBookmark */;
+			E7F7243912843CA400FDE9EC /* PBXTextBookmark */ = E7F7243912843CA400FDE9EC /* PBXTextBookmark */;
+			E7F7243A12843CA400FDE9EC /* PBXTextBookmark */ = E7F7243A12843CA400FDE9EC /* PBXTextBookmark */;
+			E7F7243B12843CA400FDE9EC /* PBXTextBookmark */ = E7F7243B12843CA400FDE9EC /* PBXTextBookmark */;
+			E7F7243C12843CA400FDE9EC /* PBXTextBookmark */ = E7F7243C12843CA400FDE9EC /* PBXTextBookmark */;
+			E7F7243D12843D0B00FDE9EC /* PBXTextBookmark */ = E7F7243D12843D0B00FDE9EC /* PBXTextBookmark */;
+			E7F7243E12843D0B00FDE9EC /* PBXTextBookmark */ = E7F7243E12843D0B00FDE9EC /* PBXTextBookmark */;
+			E7F7243F12843D0B00FDE9EC /* PBXTextBookmark */ = E7F7243F12843D0B00FDE9EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = E7AF92D212815FFC00340531 /* Source Control */;
 		userBuildSettings = {
@@ -585,15 +593,15 @@
 	E7F720C81282A98C00FDE9EC /* Bee.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1313, 702}}";
-			sepNavSelRange = "{334, 0}";
-			sepNavVisRange = "{0, 805}";
+			sepNavSelRange = "{855, 0}";
+			sepNavVisRange = "{0, 862}";
 		};
 	};
 	E7F720C91282A98C00FDE9EC /* Bee.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1313, 2006}}";
-			sepNavSelRange = "{3452, 0}";
-			sepNavVisRange = "{2692, 1110}";
+			sepNavIntBoundsRect = "{{0, 0}, {1313, 2227}}";
+			sepNavSelRange = "{3076, 0}";
+			sepNavVisRange = "{317, 1759}";
 			sepNavWindowFrame = "{{15, 179}, {1405, 946}}";
 		};
 	};
@@ -751,7 +759,7 @@
 		fRef = E7F720C81282A98C00FDE9EC /* Bee.h */;
 		name = "Bee.h: 24";
 		rLen = 0;
-		rLoc = 798;
+		rLoc = 855;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 0;
@@ -921,7 +929,7 @@
 		fRef = E7F720C81282A98C00FDE9EC /* Bee.h */;
 		name = "Bee.h: 25";
 		rLen = 0;
-		rLoc = 798;
+		rLoc = 855;
 		rType = 0;
 		vrLen = 531;
 		vrLoc = 0;
@@ -1490,9 +1498,9 @@
 		path = "/Users/garrydanger/projects/evil-bees/Classes/HelloWorldScene.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1313, 2380}}";
-			sepNavSelRange = "{3541, 0}";
-			sepNavVisRange = "{2939, 987}";
+			sepNavIntBoundsRect = "{{0, 0}, {720, 2652}}";
+			sepNavSelRange = "{3584, 0}";
+			sepNavVisRange = "{1872, 26}";
 		};
 	};
 	E7F722201283F8A000FDE9EC /* PBXTextBookmark */ = {
@@ -1783,8 +1791,8 @@
 		isa = PBXTextBookmark;
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 75";
-		rLen = 8;
-		rLoc = 2765;
+		rLen = 0;
+		rLoc = 2535;
 		rType = 0;
 		vrLen = 467;
 		vrLoc = 2106;
@@ -1901,7 +1909,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 77";
 		rLen = 9;
-		rLoc = 3301;
+		rLoc = 2903;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 1393;
@@ -1911,7 +1919,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 3419;
+		rLoc = 3021;
 		rType = 0;
 		vrLen = 1009;
 		vrLoc = 1583;
@@ -1921,7 +1929,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 77";
 		rLen = 0;
-		rLoc = 3321;
+		rLoc = 2923;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 1518;
@@ -1931,7 +1939,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 3398;
+		rLoc = 3000;
 		rType = 0;
 		vrLen = 1024;
 		vrLoc = 1583;
@@ -1941,7 +1949,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 3398;
+		rLoc = 3000;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 1489;
@@ -2110,7 +2118,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 3398;
+		rLoc = 3000;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 1486;
@@ -2120,7 +2128,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 78";
 		rLen = 0;
-		rLoc = 2817;
+		rLoc = 2535;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 1518;
@@ -2130,7 +2138,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 83";
 		rLen = 0;
-		rLoc = 3175;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 1195;
 		vrLoc = 1630;
@@ -2140,7 +2148,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 83";
 		rLen = 0;
-		rLoc = 3168;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 1649;
@@ -2150,7 +2158,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 84";
 		rLen = 0;
-		rLoc = 3168;
+		rLoc = 2770;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 1680;
@@ -2160,7 +2168,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 76";
 		rLen = 0;
-		rLoc = 2817;
+		rLoc = 2535;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 1844;
@@ -2170,7 +2178,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 92";
 		rLen = 0;
-		rLoc = 3347;
+		rLoc = 2949;
 		rType = 0;
 		vrLen = 1081;
 		vrLoc = 1727;
@@ -2210,7 +2218,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 96";
 		rLen = 0;
-		rLoc = 3398;
+		rLoc = 3000;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 1913;
@@ -2230,7 +2238,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 71";
 		rLen = 0;
-		rLoc = 2471;
+		rLoc = 2423;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 1849;
@@ -2429,7 +2437,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 84";
 		rLen = 0;
-		rLoc = 3270;
+		rLoc = 2872;
 		rType = 0;
 		vrLen = 1527;
 		vrLoc = 167;
@@ -2469,7 +2477,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 84";
 		rLen = 0;
-		rLoc = 3270;
+		rLoc = 2872;
 		rType = 0;
 		vrLen = 1607;
 		vrLoc = 196;
@@ -2479,7 +2487,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 90";
 		rLen = 0;
-		rLoc = 3398;
+		rLoc = 3000;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 1663;
@@ -2499,7 +2507,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 2840;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 1641;
@@ -2633,7 +2641,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 2662;
+		rLoc = 2443;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 0;
@@ -2643,7 +2651,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3736;
+		rLoc = 3340;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 2333;
@@ -2653,7 +2661,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3736;
+		rLoc = 3340;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 2333;
@@ -2683,7 +2691,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 81";
 		rLen = 0;
-		rLoc = 2687;
+		rLoc = 2443;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 2285;
@@ -2713,7 +2721,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3736;
+		rLoc = 3340;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 2320;
@@ -2723,7 +2731,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3736;
+		rLoc = 3340;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2733,7 +2741,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3794;
+		rLoc = 3398;
 		rType = 0;
 		vrLen = 1314;
 		vrLoc = 2289;
@@ -2743,7 +2751,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3794;
+		rLoc = 3398;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2753,7 +2761,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3794;
+		rLoc = 3398;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2775,7 +2783,7 @@
 		vrLen = 1215;
 		vrLoc = 1783;
 	};
-	E7F723571284232800FDE9EC /* Bee.m:86 */ = {
+	E7F723571284232800FDE9EC /* Bee.m:82 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2787,7 +2795,7 @@
 		functionName = "-addPoint:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 86;
+		lineNumber = 82;
 		location = "evil-bees";
 		modificationTime = 310649640.605675;
 		originalNumberOfMultipleMatches = 1;
@@ -2817,8 +2825,8 @@
 		isa = PBXTextBookmark;
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 86";
-		rLen = 16;
-		rLoc = 2870;
+		rLen = 0;
+		rLoc = 2535;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2828,7 +2836,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 110";
 		rLen = 0;
-		rLoc = 3736;
+		rLoc = 3340;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 2317;
@@ -2838,7 +2846,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 114";
 		rLen = 0;
-		rLoc = 3802;
+		rLoc = 3702;
 		rType = 0;
 		vrLen = 1171;
 		vrLoc = 2285;
@@ -2888,7 +2896,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 114";
 		rLen = 0;
-		rLoc = 3802;
+		rLoc = 3702;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 2264;
@@ -2898,7 +2906,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 110";
 		rLen = 0;
-		rLoc = 3793;
+		rLoc = 3397;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 2317;
@@ -2908,7 +2916,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 109";
 		rLen = 0;
-		rLoc = 3549;
+		rLoc = 3153;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 2289;
@@ -2918,7 +2926,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 114";
 		rLen = 0;
-		rLoc = 3757;
+		rLoc = 3361;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 2379;
@@ -2928,7 +2936,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 116";
 		rLen = 0;
-		rLoc = 3791;
+		rLoc = 3395;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 2385;
@@ -2938,7 +2946,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 110";
 		rLen = 0;
-		rLoc = 3455;
+		rLoc = 3057;
 		rType = 0;
 		vrLen = 1310;
 		vrLoc = 2385;
@@ -2948,7 +2956,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3549;
+		rLoc = 3153;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 2571;
@@ -2958,7 +2966,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3549;
+		rLoc = 3153;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 0;
@@ -3047,7 +3055,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3549;
+		rLoc = 3153;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 0;
@@ -3117,7 +3125,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 114";
 		rLen = 0;
-		rLoc = 3533;
+		rLoc = 3136;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 2747;
@@ -3127,7 +3135,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 114";
 		rLen = 0;
-		rLoc = 3533;
+		rLoc = 3136;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 2747;
@@ -3191,5 +3199,85 @@
 		rType = 0;
 		vrLen = 16;
 		vrLoc = 1824;
+	};
+	E7F7243812843CA400FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 506EDC2F102F528A00A389B3 /* HelloWorldScene.h */;
+		name = "HelloWorldScene.h: 19";
+		rLen = 0;
+		rLoc = 348;
+		rType = 0;
+		vrLen = 498;
+		vrLoc = 0;
+	};
+	E7F7243912843CA400FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 132";
+		rLen = 0;
+		rLoc = 3541;
+		rType = 0;
+		vrLen = 1069;
+		vrLoc = 1359;
+	};
+	E7F7243A12843CA400FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C81282A98C00FDE9EC /* Bee.h */;
+		name = "Bee.h: 21";
+		rLen = 14;
+		rLoc = 363;
+		rType = 0;
+		vrLen = 805;
+		vrLoc = 0;
+	};
+	E7F7243B12843CA400FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 109";
+		rLen = 0;
+		rLoc = 3054;
+		rType = 0;
+		vrLen = 1385;
+		vrLoc = 1627;
+	};
+	E7F7243C12843CA400FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 83";
+		rLen = 0;
+		rLoc = 2612;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 2094;
+	};
+	E7F7243D12843D0B00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C81282A98C00FDE9EC /* Bee.h */;
+		name = "Bee.h: 35";
+		rLen = 0;
+		rLoc = 855;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 0;
+	};
+	E7F7243E12843D0B00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 119";
+		rLen = 55;
+		rLoc = 3401;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 2614;
+	};
+	E7F7243F12843D0B00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 106";
+		rLen = 0;
+		rLoc = 3076;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 2617;
 	};
 }

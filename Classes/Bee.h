@@ -32,5 +32,6 @@
 - (void) startPoint:(CGPoint)startPoint;
 - (void) addPoint:(CGPoint)nextPoint;
 - (void) move;
+- (CCSequence *)generateDelegateSequence:(CGPoint)point;
 
 @end

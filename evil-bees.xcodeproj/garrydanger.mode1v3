@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,7 +272,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>10</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -309,12 +308,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelloWorldScene.m</string>
+								<string>Bee.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>HelloWorldScene.m</string>
+										<string>Bee.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7F723D412842F2400FDE9EC</string>
+										<string>E7F7243F12843D0B00FDE9EC</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -345,10 +346,10 @@
 											<string>E7F7232312841DC500FDE9EC</string>
 											<string>E7F723311284213600FDE9EC</string>
 											<string>E7F7235D1284239F00FDE9EC</string>
-											<string>E7F7239812842A8A00FDE9EC</string>
-											<string>E7F723AE12842B8200FDE9EC</string>
-											<string>E7F723BA12842E0400FDE9EC</string>
-											<string>E7F723BB12842E0400FDE9EC</string>
+											<string>E7F7243812843CA400FDE9EC</string>
+											<string>E7F7243912843CA400FDE9EC</string>
+											<string>E7F7243D12843D0B00FDE9EC</string>
+											<string>E7F7243E12843D0B00FDE9EC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -549,9 +550,9 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>E7F720C412828E7900FDE9EC</string>
 		<string>E7F720C612828E7900FDE9EC</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7AF92C712815FFC00340531</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/garrydanger/projects/evil-bees/evil-bees.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -928,7 +929,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

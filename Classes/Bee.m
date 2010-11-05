@@ -76,15 +76,11 @@
   [_sprite stopAllActions];
   [_sprite runAction:[CCRepeatForever actionWithAction: action]];
   
-  CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:startPoint];
-  CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
-  _startSequence = [[CCSequence actions:nextAction, movedDelegate, nil] retain];
+  _startSequence = [[self generateDelegateSequence:startPoint] retain];
 }
 
 - (void)addPoint:(CGPoint)nextPoint {
-  CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:nextPoint];
-  CCIntervalAction *nextMovedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
-  CCIntervalAction *nextSequence = [CCSequence actions:nextAction, nextMovedDelegate, nil];
+  CCIntervalAction *nextSequence = [self generateDelegateSequence:nextPoint];
   
   // for tracing the path
   [_path addObject:[NSValue valueWithCGPoint:nextPoint]];
@@ -108,16 +104,24 @@
 
 - (void)moved {
   [_path removeObjectAtIndex:0];
+
   if ([_path count] == 0) {
     [self explore];
     return;
   }
+
   CGPoint lastPosition = [(NSValue *)[_path objectAtIndex:0] CGPointValue];
   CGPoint currentPosition = [_sprite position];
   
   //NSLog(@"currentPosition.x: %f, lastPosition.x: %f", 
   
   [_sprite setFlipX:currentPosition.x > lastPosition.x];
+}
+
+- (CCSequence *)generateDelegateSequence:(CGPoint)point {
+  CCIntervalAction *action = [CCMoveTo actionWithDuration:0.1 position:point];
+  CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
+  return [CCSequence actions:action, movedDelegate, nil];
 }
 
 @end
