@@ -10,11 +10,17 @@
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
+@class Bee;
+
 // HelloWorld Layer
-@interface HelloWorld : CCLayer
-{
+@interface HelloWorld : CCLayer {
+@private
+  NSMutableArray *_path;
+  Bee *_bee;
 }
 
+@property (nonatomic, retain) NSMutableArray *path;
+@property (nonatomic, retain) Bee *bee;
 // returns a Scene that contains the HelloWorld as the only child
 +(id) scene;
 -(void) move;

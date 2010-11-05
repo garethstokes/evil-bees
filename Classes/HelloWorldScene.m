@@ -9,17 +9,16 @@
 // Import the interfaces
 #import "HelloWorldScene.h"
 #import "CCTouchDispatcher.h"
+#import "Bee.h"
 
-CCSprite* bee;
-CCAnimation* idleAnimation;
-CCSpriteSheet *sheet;
-CCAnimate* idleAction;
-CCCallFunc *playIdleAction;
-NSMutableArray* path; 
+CCLabel* status;
 
 
 // HelloWorld implementation
 @implementation HelloWorld
+
+@synthesize path=_path;
+@synthesize bee=_bee;
 
 +(id) scene
 {
@@ -42,120 +41,75 @@ NSMutableArray* path;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
-	
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
                                               swallowsTouches:YES];
+    self.bee = [[Bee alloc] init];
+    self.path = [[NSMutableArray alloc] init];
+
     
-    CGSize s = [[CCDirector sharedDirector] winSize];
+		// Add the sprite as a child of the sheet, so that it knows where to get its image data.
+    [self addChild:[_bee sheet]];
     
-    path = [[NSMutableArray alloc] init];
+    // create and initialize a Label
+		status = [CCLabel labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:16];
     
-		// Create a SpriteSheet -- just a big image which is prepared to 
-    // be carved up into smaller images as needed
-    sheet = [CCSpriteSheet spriteSheetWithFile:@"bees.png" capacity:50];
-    
-    // Load sprite frames, which are just a bunch of named rectangle 
-    // definitions that go along with the image in a sprite sheet
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"bees.plist"];
-    
-    // Finally, create a sprite, using the name of a frame in our frame cache.
-    bee = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
-    bee.position = ccp( s.width/2-80, s.height/2);
-    
-    // Add the sprite as a child of the sheet, so that it knows where to get its image data.
-    [sheet addChild:bee];
-    
-    // Add sprite sheet to parent (it won't draw anything itself, but 
-    // needs to be there so that it's in the rendering pipeline)
-    [self addChild:sheet];
-    
-    NSMutableArray* idleFrames = [NSMutableArray array];
-    [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee1.png"]];
-    [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee2.png"]];
-    
-    idleAnimation = [CCAnimation animationWithName:@"dance" delay:0.1f frames:idleFrames];
-    
-    idleAction = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:idleAnimation]] retain];
-    playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(playIdle:)] retain];
-    
-		[bee runAction:[CCRepeatForever actionWithAction: idleAction]];
-    [self move];
+		// position the label on the center of the screen
+		status.position = ccp(350, 20);
+		
+		// add the label as a child to this Layer
+		[self addChild: status];
   }
 	return self;
 }
 
 -(void) draw
 {
-  //ccDrawPoint(ccp(50, 50));
-  //ccDrawLine(ccp(50, 50), ccp(100, 100));
-  for (int i = 0; i < [path count]; i++) {
-    //NSValue* val = [path objectAtIndex:i];
-    //CGPoint p = [val CGPointValue];
-    //ccDrawPoint(ccp(p.y, p.x));
+  [status setString:[_bee status]];
+
+  for (int i = 0; i < [_path count]; i++) {
+    NSValue* val = [_path objectAtIndex:i];
+    CGPoint p = [val CGPointValue];
+    ccDrawPoint(p);
   }
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-  [path removeAllObjects];
+  [_path removeAllObjects];
   return YES;
 }
 
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
   CGPoint point = [touch locationInView:[touch view]];
-  id p = [NSValue valueWithCGPoint:point];
-  [path addObject:p];
+  id p = [NSValue valueWithCGPoint:CGPointMake(point.y, point.x)];
+  [_path addObject:p];
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-  if ([path count] < 1) {
+  if ([_path count] < 1) {
     return;
   }
-  
-  NSValue* val = [path objectAtIndex:0];
-  CGPoint p = [val CGPointValue];
-  
-  CGPoint startingPoint;
-  startingPoint.x = p.y;
-  startingPoint.y = p.x;
-  
-  id action = [CCMoveTo actionWithDuration:0.5 position:startingPoint];
-  id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
-  [bee runAction: [CCSequence actions:action, m, nil]];
-  [m release];
+
+  [self move];
 }
 
 - (void)move {
-  CGPoint currentPosition = [bee position];
+  CCFiniteTimeAction *prev = [CCMoveTo actionWithDuration:0.1 position:[(NSValue *)[_path objectAtIndex:0] CGPointValue]];
+  CCFiniteTimeAction *now;
+  NSLog(@"how long is the sequence %d", [_path count]);
+
+  CGPoint p;
   
-  if ([path count] == 0) {
-    CGPoint random_point = ccp(rand() % 480, rand() % 320);
-    
-    [bee setFlipX:currentPosition.x > random_point.x];
-       
-    id action = [CCMoveTo actionWithDuration:2 position:random_point];
-    id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
-    [bee runAction: [CCSequence actions:action, m, nil]];
-    [m release];
-    return;
-  }
-  
-  [path removeObjectAtIndex:0];
-   
-  NSValue* val = [path objectAtIndex:0];
-  CGPoint p = [val CGPointValue];
-  CGPoint startingPoint;
-  startingPoint.x = p.y;
-  startingPoint.y = p.x;
-  
-  //NSLog(@"currentPosition.x: )
-  [bee setFlipX:currentPosition.x > p.y];
- 
-  id action = [CCMoveTo actionWithDuration:0.1 position:startingPoint];
-  id m = [[CCCallFunc actionWithTarget:self selector:@selector(move)] retain];
-  [bee runAction: [CCSequence actions:action, m, nil]];
-  [m release];
+  do {
+    [_path removeObjectAtIndex:0];
+    p = [(NSValue *)[_path objectAtIndex:0] CGPointValue];
+		now = [CCMoveTo actionWithDuration:3 position:p];
+		prev = [CCSequence actionOne:prev two: now];
+
+  } while ([_path count] != 0);
+
+  [[_bee sprite] runAction: prev];
 }
 
 // on "dealloc" you need to release all your retained objects
