@@ -16,8 +16,9 @@
   NSString* status;
 @private
   CCSprite* _sprite;
-  CCIntervalAction *_startAction;
+  CCIntervalAction *_startSequence;
   CCSequence *_sequence;
+  NSMutableArray *_path;
 }
 
 @property(nonatomic, retain) CCSprite* sprite;
@@ -25,6 +26,7 @@
 @property(nonatomic, retain) CCSpriteSheet* sheet;
 @property(nonatomic, retain) CCAnimate* action;
 @property(nonatomic, retain) NSString* status;
+@property(nonatomic, retain) NSMutableArray* path;
 
 - (void) explore;
 - (void) startPoint:(CGPoint)startPoint;

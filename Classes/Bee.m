@@ -16,6 +16,7 @@
 @synthesize sheet;
 @synthesize action;
 @synthesize status;
+@synthesize path=_path;
 
 - (id) init {
   CGSize s = [[CCDirector sharedDirector] winSize];
@@ -40,6 +41,8 @@
   
   action = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]] retain];
   //playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(action)] retain];
+  
+  _path = [[NSMutableArray alloc] init];
   
   [sheet addChild:_sprite];  
   [_sprite runAction:[CCRepeatForever actionWithAction: action]];
@@ -68,27 +71,43 @@
     [_sequence release];
     _sequence = nil;
   }
-  _startAction = [[CCMoveTo actionWithDuration:0.1 position:startPoint] retain];
+  [_path removeAllObjects];
+  
+  [_path addObject:[NSValue valueWithCGPoint:startPoint]];
+  
+  
+  CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:startPoint];
+  CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
+  _startSequence = [[CCSequence actions:nextAction, movedDelegate, nil] retain];
 }
 
 - (void)addPoint:(CGPoint)nextPoint {
   CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:nextPoint];
-
+  CCIntervalAction *nextMovedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
+  CCIntervalAction *nextSequence = [CCSequence actions:nextAction, nextMovedDelegate, nil];
+  
+  // for tracing the path
+  [_path addObject:[NSValue valueWithCGPoint:nextPoint]];
+                                    
   CCIntervalAction *prevAction;
 
   if (_sequence == nil) {
-    prevAction = _startAction;
+    prevAction = _startSequence;
   } else {
     prevAction = _sequence;
   }
-
-  _sequence = [[CCSequence actionOne:prevAction two: nextAction] retain];
+  
+  _sequence = [[CCSequence actionOne:prevAction two: nextSequence] retain];
 }
 
 - (void)move {
   if (_sequence != nil) {
     [_sprite runAction: _sequence];
   }
+}
+
+- (void)moved {
+  [_path removeObjectAtIndex:0];
 }
 
 @end

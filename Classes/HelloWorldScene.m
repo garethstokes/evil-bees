@@ -65,13 +65,13 @@ CCLabel* status;
 
 -(void) draw
 {
-//  [status setString:[_bee status]];
-//
-//  for (int i = 0; i < [_path count]; i++) {
-//    NSValue* val = [_path objectAtIndex:i];
-//    CGPoint p = [val CGPointValue];
-//    ccDrawPoint(p);
-//  }
+  [status setString:[_bee status]];
+
+  for (int i = 0; i < [[_bee path] count]; i++) {
+    NSValue* val = [[_bee path] objectAtIndex:i];
+    CGPoint p = [val CGPointValue];
+    ccDrawPoint(p);
+  }
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  
