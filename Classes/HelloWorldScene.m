@@ -17,7 +17,6 @@ CCLabel* status;
 // HelloWorld implementation
 @implementation HelloWorld
 
-@synthesize bee=_bee;
 @synthesize currentBee=_currentBee;
 
 +(id) scene
@@ -45,12 +44,14 @@ CCLabel* status;
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
                                               swallowsTouches:YES];
-    self.bee = [[Bee alloc] init];
+    _bees = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 3; i++) {
+      Bee *bee = [[[Bee alloc] init] autorelease];
+      [_bees addObject:bee];
+      // Add the sprite as a child of the sheet, so that it knows where to get its image data.
+      [self addChild:[bee sheet]];
+    }
 
-    
-		// Add the sprite as a child of the sheet, so that it knows where to get its image data.
-    [self addChild:[_bee sheet]];
-    
     // create and initialize a Label
 		status = [CCLabel labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:16];
     
@@ -65,42 +66,47 @@ CCLabel* status;
 
 -(void) draw
 {
-  [status setString:[_bee status]];
-
-  
-  for (int i = 0; i < [[_bee path] count]; i++) {
-    NSValue* val = [[_bee path] objectAtIndex:i];
-    CGPoint p = [val CGPointValue];
-    ccDrawPoint(p);
-  }
-  
-  CGPoint last = ccp(0, 0);
-  for (int i = 0; i < [[_bee path] count]; i++) {
-    NSValue* val = [[_bee path] objectAtIndex:i];
-    CGPoint p = [val CGPointValue];
-    if (last.y == 0 && last.x == 0) {
+  for (Bee *bee in _bees) {
+    [status setString:[bee status]];
+    for (int i = 0; i < [[bee path] count]; i++) {
+      NSValue* val = [[bee path] objectAtIndex:i];
+      CGPoint p = [val CGPointValue];
+      ccDrawPoint(p);
+    }
+    
+    CGPoint last = ccp(0, 0);
+    for (int i = 0; i < [[bee path] count]; i++) {
+      NSValue* val = [[bee path] objectAtIndex:i];
+      CGPoint p = [val CGPointValue];
+      if (last.y == 0 && last.x == 0) {
+        last = p;
+      }
+      ccDrawLine(ccp(last.x, last.y), ccp(p.x, p.y));
       last = p;
     }
-    ccDrawLine(ccp(last.x, last.y), ccp(p.x, p.y));
-    last = p;
   }
+
+  
+
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  
   CGPoint point = [touch locationInView:[touch view]];
   NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
-  CCSprite *sprite = [_bee sprite];
+  for (Bee *bee in _bees) {
+    CCSprite *sprite = [bee sprite];
 
-  CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
-  NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
-  CGSize size = [sprite contentSize];
-  
-  if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) {
-    [_bee startPoint:CGPointMake(point.y, point.x)];
-    _currentBee = _bee;
+    CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
+    NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
+    CGSize size = [sprite contentSize];
+    
+    if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) {
+      [bee startPoint:CGPointMake(point.y, point.x)];
+      _currentBee = bee;
+      break;
+    }
   }
-  
-  
+
   return YES;
 }
 

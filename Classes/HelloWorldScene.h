@@ -15,11 +15,10 @@
 // HelloWorld Layer
 @interface HelloWorld : CCLayer {
 @private
-  Bee *_bee;
+  NSMutableArray *_bees;
   Bee *_currentBee;
 }
 
-@property (nonatomic, retain) Bee *bee;
 @property (nonatomic, retain) Bee *currentBee;
 // returns a Scene that contains the HelloWorld as the only child
 +(id) scene;

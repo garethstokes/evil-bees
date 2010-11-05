@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7F723901284278F00FDE9EC</string>
+										<string>E7F723B312842BB300FDE9EC</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -343,13 +343,13 @@
 											<string>E7F7227A12840BFA00FDE9EC</string>
 											<string>E7F722E8128415B100FDE9EC</string>
 											<string>E7F7231212841A3300FDE9EC</string>
-											<string>E7F7232212841DC500FDE9EC</string>
 											<string>E7F7232312841DC500FDE9EC</string>
 											<string>E7F723311284213600FDE9EC</string>
-											<string>E7F723321284213600FDE9EC</string>
 											<string>E7F7235D1284239F00FDE9EC</string>
-											<string>E7F723771284257E00FDE9EC</string>
-											<string>E7F723781284257E00FDE9EC</string>
+											<string>E7F7239812842A8A00FDE9EC</string>
+											<string>E7F723AD12842B8200FDE9EC</string>
+											<string>E7F723AE12842B8200FDE9EC</string>
+											<string>E7F723AF12842B8200FDE9EC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -579,7 +579,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Bee.m</string>
+								<string>HelloWorldScene.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -648,7 +648,7 @@
 			<key>WindowToolGUID</key>
 			<string>E7AF92C712815FFC00340531</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

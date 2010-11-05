@@ -31,7 +31,7 @@
   
   // Finally, create a sprite, using the name of a frame in our frame cache.
   _sprite = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
-  _sprite.position = ccp( s.width/2-80, s.height/2);
+  _sprite.position = ccp(rand() % 480, rand() % 320);
   
   NSMutableArray* idleFrames = [NSMutableArray array];
   [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee1.png"]];
@@ -46,7 +46,7 @@
   
   [sheet addChild:_sprite];  
   [_sprite runAction:[CCRepeatForever actionWithAction: action]];
-  //[self explore];
+  [self explore];
   
   return [super init];
 }
@@ -59,7 +59,7 @@
   
   [_sprite setFlipX:currentPosition.x > random_point.x];
   
-  id a = [CCMoveTo actionWithDuration:2 position:random_point];
+  id a = [CCMoveTo actionWithDuration:5 position:random_point];
   id m = [[CCCallFunc actionWithTarget:self selector:@selector(explore)] retain];
   [_sprite runAction: [CCSequence actions:a, m, nil]];
   [m release];
@@ -75,6 +75,8 @@
   
   [_path addObject:[NSValue valueWithCGPoint:startPoint]];
   
+  [_sprite stopAllActions];
+  [_sprite runAction:[CCRepeatForever actionWithAction: action]];
   
   CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:startPoint];
   CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
@@ -108,7 +110,10 @@
 
 - (void)moved {
   [_path removeObjectAtIndex:0];
-  if ([_path count] == 0) return;
+  if ([_path count] == 0) {
+    [self explore];
+    return;
+  }
   CGPoint lastPosition = [(NSValue *)[_path objectAtIndex:0] CGPointValue];
   CGPoint currentPosition = [_sprite position];
   
