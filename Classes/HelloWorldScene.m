@@ -67,10 +67,22 @@ CCLabel* status;
 {
   [status setString:[_bee status]];
 
+  
   for (int i = 0; i < [[_bee path] count]; i++) {
     NSValue* val = [[_bee path] objectAtIndex:i];
     CGPoint p = [val CGPointValue];
     ccDrawPoint(p);
+  }
+  
+  CGPoint last = ccp(0, 0);
+  for (int i = 0; i < [[_bee path] count]; i++) {
+    NSValue* val = [[_bee path] objectAtIndex:i];
+    CGPoint p = [val CGPointValue];
+    if (last.y == 0 && last.x == 0) {
+      last = p;
+    }
+    ccDrawLine(ccp(last.x, last.y), ccp(p.x, p.y));
+    last = p;
   }
 }
 

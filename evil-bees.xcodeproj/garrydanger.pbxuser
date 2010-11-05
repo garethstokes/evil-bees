@@ -315,6 +315,18 @@
 			E7F7235D1284239F00FDE9EC /* PBXTextBookmark */ = E7F7235D1284239F00FDE9EC /* PBXTextBookmark */;
 			E7F7235E1284239F00FDE9EC /* PBXTextBookmark */ = E7F7235E1284239F00FDE9EC /* PBXTextBookmark */;
 			E7F7235F1284239F00FDE9EC /* PBXTextBookmark */ = E7F7235F1284239F00FDE9EC /* PBXTextBookmark */;
+			E7F7236D1284252500FDE9EC /* PBXTextBookmark */ = E7F7236D1284252500FDE9EC /* PBXTextBookmark */;
+			E7F7236E1284252500FDE9EC /* PBXTextBookmark */ = E7F7236E1284252500FDE9EC /* PBXTextBookmark */;
+			E7F7236F1284252500FDE9EC /* PBXTextBookmark */ = E7F7236F1284252500FDE9EC /* PBXTextBookmark */;
+			E7F723741284254000FDE9EC /* PBXTextBookmark */ = E7F723741284254000FDE9EC /* PBXTextBookmark */;
+			E7F723771284257E00FDE9EC /* PBXTextBookmark */ = E7F723771284257E00FDE9EC /* PBXTextBookmark */;
+			E7F723781284257E00FDE9EC /* PBXTextBookmark */ = E7F723781284257E00FDE9EC /* PBXTextBookmark */;
+			E7F723791284257E00FDE9EC /* PBXTextBookmark */ = E7F723791284257E00FDE9EC /* PBXTextBookmark */;
+			E7F7237E1284269500FDE9EC /* PBXTextBookmark */ = E7F7237E1284269500FDE9EC /* PBXTextBookmark */;
+			E7F72383128426D300FDE9EC /* PBXTextBookmark */ = E7F72383128426D300FDE9EC /* PBXTextBookmark */;
+			E7F723881284271C00FDE9EC /* PBXTextBookmark */ = E7F723881284271C00FDE9EC /* PBXTextBookmark */;
+			E7F7238B1284275800FDE9EC /* PBXTextBookmark */ = E7F7238B1284275800FDE9EC /* PBXTextBookmark */;
+			E7F723901284278F00FDE9EC /* PBXTextBookmark */ = E7F723901284278F00FDE9EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = E7AF92D212815FFC00340531 /* Source Control */;
 		userBuildSettings = {
@@ -521,7 +533,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 113";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 2632;
@@ -531,7 +543,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 158";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1352;
 		vrLoc = 3634;
@@ -555,9 +567,9 @@
 	};
 	E7F720C91282A98C00FDE9EC /* Bee.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1313, 1921}}";
-			sepNavSelRange = "{3445, 0}";
-			sepNavVisRange = "{2317, 1139}";
+			sepNavIntBoundsRect = "{{0, 0}, {1313, 1972}}";
+			sepNavSelRange = "{3481, 0}";
+			sepNavVisRange = "{2571, 1163}";
 			sepNavWindowFrame = "{{15, 179}, {1405, 946}}";
 		};
 	};
@@ -755,7 +767,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 99";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 1939;
@@ -815,7 +827,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 97";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 1615;
@@ -915,7 +927,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 97";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1194;
 		vrLoc = 1629;
@@ -925,7 +937,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 1631;
@@ -955,7 +967,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 1403;
@@ -1255,7 +1267,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 106";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 1018;
 		vrLoc = 2002;
@@ -1365,7 +1377,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 106";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 2045;
@@ -1444,7 +1456,7 @@
 		isa = PBXTextBookmark;
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 	};
 	E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */ = {
@@ -1454,9 +1466,9 @@
 		path = "/Users/garrydanger/projects/evil-bees/Classes/HelloWorldScene.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {720, 2057}}";
-			sepNavSelRange = "{2788, 0}";
-			sepNavVisRange = "{1958, 36}";
+			sepNavIntBoundsRect = "{{0, 0}, {1313, 2261}}";
+			sepNavSelRange = "{2058, 0}";
+			sepNavVisRange = "{1382, 1083}";
 		};
 	};
 	E7F722201283F8A000FDE9EC /* PBXTextBookmark */ = {
@@ -1464,7 +1476,7 @@
 		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 106";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 35;
 		vrLoc = 2735;
@@ -1504,7 +1516,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 106";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 932;
 		vrLoc = 2130;
@@ -1514,7 +1526,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 89";
 		rLen = 214;
-		rLoc = 2432;
+		rLoc = 2732;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 2575;
@@ -1535,7 +1547,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 90;
+		rLoc = 102;
 		rType = 1;
 	};
 	E7F7223A1284009900FDE9EC /* PBXTextBookmark */ = {
@@ -1543,7 +1555,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 79";
 		rLen = 0;
-		rLoc = 1849;
+		rLoc = 2149;
 		rType = 0;
 		vrLen = 187;
 		vrLoc = 1743;
@@ -1553,7 +1565,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 94";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 26;
 		vrLoc = 2392;
@@ -1638,7 +1650,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 79";
 		rLen = 0;
-		rLoc = 1849;
+		rLoc = 2149;
 		rType = 0;
 		vrLen = 254;
 		vrLoc = 1743;
@@ -1648,7 +1660,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 94";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 151;
 		vrLoc = 2323;
@@ -1658,7 +1670,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 105";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 1913;
@@ -1668,7 +1680,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 79";
 		rLen = 0;
-		rLoc = 1849;
+		rLoc = 2149;
 		rType = 0;
 		vrLen = 298;
 		vrLoc = 1699;
@@ -1678,7 +1690,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 94";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 53;
 		vrLoc = 2473;
@@ -1688,7 +1700,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 103";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 1913;
@@ -1698,7 +1710,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 104";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1913;
@@ -1718,7 +1730,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 100";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 1915;
@@ -1728,7 +1740,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 110";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1170;
 		vrLoc = 1915;
@@ -1738,7 +1750,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 78";
 		rLen = 0;
-		rLoc = 1849;
+		rLoc = 2149;
 		rType = 0;
 		vrLen = 322;
 		vrLoc = 1743;
@@ -1785,7 +1797,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 90";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 78;
 		vrLoc = 2080;
@@ -1855,7 +1867,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 1474;
@@ -1915,7 +1927,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2790;
+		rLoc = 3090;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 1474;
@@ -1924,7 +1936,7 @@
 		isa = PBXTextBookmark;
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 69";
-		rLen = 196;
+		rLen = 199;
 		rLoc = 1583;
 		rType = 0;
 		vrLen = 1260;
@@ -1994,7 +2006,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 88";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 106;
 		vrLoc = 2008;
@@ -2024,7 +2036,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3039;
 		rType = 0;
 		vrLen = 1007;
 		vrLoc = 1403;
@@ -2034,7 +2046,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3039;
 		rType = 0;
 		vrLen = 1071;
 		vrLoc = 1403;
@@ -2154,7 +2166,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3039;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 1547;
@@ -2214,7 +2226,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 78";
 		rLen = 0;
-		rLoc = 2345;
+		rLoc = 2645;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 1531;
@@ -2224,7 +2236,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 80";
 		rLen = 0;
-		rLoc = 2161;
+		rLoc = 2461;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 1532;
@@ -2234,7 +2246,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 79";
 		rLen = 0;
-		rLoc = 1997;
+		rLoc = 2297;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 1545;
@@ -2284,7 +2296,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 80";
 		rLen = 0;
-		rLoc = 1994;
+		rLoc = 2294;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 1545;
@@ -2294,7 +2306,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 81";
 		rLen = 0;
-		rLoc = 2016;
+		rLoc = 2316;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 1547;
@@ -2304,7 +2316,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 82";
 		rLen = 0;
-		rLoc = 2096;
+		rLoc = 2396;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 1585;
@@ -2343,7 +2355,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 97";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 125;
 		vrLoc = 1748;
@@ -2353,7 +2365,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2432;
+		rLoc = 2732;
 		rType = 0;
 		vrLen = 1197;
 		vrLoc = 1634;
@@ -2363,7 +2375,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2432;
+		rLoc = 2732;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 1680;
@@ -2373,7 +2385,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2432;
+		rLoc = 2732;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 1680;
@@ -2413,7 +2425,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 97";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 125;
 		vrLoc = 1748;
@@ -2423,7 +2435,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 91";
 		rLen = 0;
-		rLoc = 2432;
+		rLoc = 2732;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 1634;
@@ -2493,7 +2505,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 98";
 		rLen = 0;
-		rLoc = 2648;
+		rLoc = 2948;
 		rType = 0;
 		vrLen = 942;
 		vrLoc = 39;
@@ -2503,7 +2515,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 86";
 		rLen = 0;
-		rLoc = 2251;
+		rLoc = 2551;
 		rType = 0;
 		vrLen = 1091;
 		vrLoc = 1782;
@@ -2547,7 +2559,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 86";
 		rLen = 0;
-		rLoc = 2251;
+		rLoc = 2551;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 1716;
@@ -2557,7 +2569,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 71";
 		rLen = 0;
-		rLoc = 1692;
+		rLoc = 1695;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 1520;
@@ -2567,7 +2579,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 71";
 		rLen = 0;
-		rLoc = 1692;
+		rLoc = 1695;
 		rType = 0;
 		vrLen = 1127;
 		vrLoc = 1520;
@@ -2607,7 +2619,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3445;
+		rLoc = 3668;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 2333;
@@ -2617,7 +2629,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3415;
+		rLoc = 3668;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 2333;
@@ -2637,7 +2649,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 110";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 63;
 		vrLoc = 1958;
@@ -2667,7 +2679,7 @@
 		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
 		name = "HelloWorldScene.m: 110";
 		rLen = 0;
-		rLoc = 2788;
+		rLoc = 3088;
 		rType = 0;
 		vrLen = 63;
 		vrLoc = 1958;
@@ -2677,7 +2689,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3417;
+		rLoc = 3668;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 2320;
@@ -2687,7 +2699,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 111";
 		rLen = 0;
-		rLoc = 3414;
+		rLoc = 3668;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2697,7 +2709,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3448;
+		rLoc = 3726;
 		rType = 0;
 		vrLen = 1314;
 		vrLoc = 2289;
@@ -2707,7 +2719,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3448;
+		rLoc = 3726;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2717,7 +2729,7 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 113";
 		rLen = 0;
-		rLoc = 3448;
+		rLoc = 3726;
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 2320;
@@ -2792,9 +2804,129 @@
 		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
 		name = "Bee.m: 110";
 		rLen = 0;
-		rLoc = 3445;
+		rLoc = 3668;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 2317;
+	};
+	E7F7236D1284252500FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 114";
+		rLen = 0;
+		rLoc = 3734;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 2285;
+	};
+	E7F7236E1284252500FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 52";
+		rLen = 0;
+		rLoc = 1217;
+		rType = 0;
+		vrLen = 1232;
+		vrLoc = 544;
+	};
+	E7F7236F1284252500FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 86";
+		rLen = 0;
+		rLoc = 2079;
+		rType = 0;
+		vrLen = 1100;
+		vrLoc = 1256;
+	};
+	E7F723741284254000FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 84";
+		rLen = 0;
+		rLoc = 2058;
+		rType = 0;
+		vrLen = 1042;
+		vrLoc = 1382;
+	};
+	E7F723771284257E00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F7221F1283F8A000FDE9EC /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 84";
+		rLen = 0;
+		rLoc = 2058;
+		rType = 0;
+		vrLen = 1083;
+		vrLoc = 1382;
+	};
+	E7F723781284257E00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 114";
+		rLen = 0;
+		rLoc = 3734;
+		rType = 0;
+		vrLen = 1192;
+		vrLoc = 2264;
+	};
+	E7F723791284257E00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 110";
+		rLen = 0;
+		rLoc = 3725;
+		rType = 0;
+		vrLen = 1139;
+		vrLoc = 2317;
+	};
+	E7F7237E1284269500FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 109";
+		rLen = 0;
+		rLoc = 3481;
+		rType = 0;
+		vrLen = 1243;
+		vrLoc = 2289;
+	};
+	E7F72383128426D300FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 114";
+		rLen = 0;
+		rLoc = 3689;
+		rType = 0;
+		vrLen = 1256;
+		vrLoc = 2379;
+	};
+	E7F723881284271C00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 116";
+		rLen = 0;
+		rLoc = 3723;
+		rType = 0;
+		vrLen = 1254;
+		vrLoc = 2385;
+	};
+	E7F7238B1284275800FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 110";
+		rLen = 0;
+		rLoc = 3417;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 2385;
+	};
+	E7F723901284278F00FDE9EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F720C91282A98C00FDE9EC /* Bee.m */;
+		name = "Bee.m: 111";
+		rLen = 0;
+		rLoc = 3481;
+		rType = 0;
+		vrLen = 1163;
+		vrLoc = 2571;
 	};
 }

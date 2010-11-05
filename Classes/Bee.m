@@ -108,6 +108,13 @@
 
 - (void)moved {
   [_path removeObjectAtIndex:0];
+  if ([_path count] == 0) return;
+  CGPoint lastPosition = [(NSValue *)[_path objectAtIndex:0] CGPointValue];
+  CGPoint currentPosition = [_sprite position];
+  
+  //NSLog(@"currentPosition.x: %f, lastPosition.x: %f", 
+  
+  [_sprite setFlipX:currentPosition.x > lastPosition.x];
 }
 
 @end
