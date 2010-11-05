@@ -19,8 +19,6 @@
 @synthesize path=_path;
 
 - (id) init {
-  CGSize s = [[CCDirector sharedDirector] winSize];
-  
   // Create a SpriteSheet -- just a big image which is prepared to 
   // be carved up into smaller images as needed
   sheet = [CCSpriteSheet spriteSheetWithFile:@"bees.png" capacity:50];

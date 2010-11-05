@@ -41,15 +41,15 @@ CCLabel* status;
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
     // create a TMX map
-    CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"bee_desert.tmx"];
-    [self addChild:map];
+    //CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"bee_desert.tmx"];
+    //[self addChild:map];
     
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
                                               swallowsTouches:YES];
     _bees = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 50; i++) {
       Bee *bee = [[[Bee alloc] init] autorelease];
       [_bees addObject:bee];
       // Add the sprite as a child of the sheet, so that it knows where to get its image data.
@@ -71,16 +71,20 @@ CCLabel* status;
 -(void) draw
 {
   for (Bee *bee in _bees) {
+    NSArray *path = [bee path];
+    if ([path count] == 0) continue;
+    
     [status setString:[bee status]];
-    for (int i = 0; i < [[bee path] count]; i++) {
-      NSValue* val = [[bee path] objectAtIndex:i];
+
+    for (int i = 0; i < [path count]; i++) {
+      NSValue* val = [path objectAtIndex:i];
       CGPoint p = [val CGPointValue];
       ccDrawPoint(p);
     }
     
     CGPoint last = ccp(0, 0);
-    for (int i = 0; i < [[bee path] count]; i++) {
-      NSValue* val = [[bee path] objectAtIndex:i];
+    for (int i = 0; i < [path count]; i++) {
+      NSValue* val = [path objectAtIndex:i];
       CGPoint p = [val CGPointValue];
       if (last.y == 0 && last.x == 0) {
         last = p;
@@ -89,19 +93,18 @@ CCLabel* status;
       last = p;
     }
   }
-
-  
-
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  
   CGPoint point = [touch locationInView:[touch view]];
-  NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
-  for (Bee *bee in _bees) {
+//  NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
+    for (Bee *bee in _bees) {
+//  for (int i = 0; i < [_bees count]; i++) {
+//    Bee *bee = [_bees objectAtIndex:i];
     CCSprite *sprite = [bee sprite];
 
     CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
-    NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
+//    NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
     CGSize size = [sprite contentSize];
     
     if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) {
@@ -126,8 +129,7 @@ CCLabel* status;
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-  NSLog(@"ccTouchEnded");
-  
+//  NSLog(@"ccTouchEnded");
   [_currentBee move];
   _currentBee = nil;
 }
