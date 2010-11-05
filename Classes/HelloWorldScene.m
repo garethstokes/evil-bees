@@ -40,6 +40,10 @@ CCLabel* status;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
+    // create a TMX map
+    CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"bee_desert.tmx"];
+    [self addChild:map];
+    
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
