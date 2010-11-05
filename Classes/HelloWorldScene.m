@@ -99,11 +99,11 @@ CCLabel* status;
   CGPoint point = [touch locationInView:[touch view]];
 //  NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
     for (Bee *bee in _bees) {
-//  for (int i = 0; i < [_bees count]; i++) {
-//    Bee *bee = [_bees objectAtIndex:i];
+
     CCSprite *sprite = [bee sprite];
 
     CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
+
 //    NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
     CGSize size = [sprite contentSize];
     

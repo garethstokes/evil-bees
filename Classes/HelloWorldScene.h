@@ -20,8 +20,7 @@
 }
 
 @property (nonatomic, retain) Bee *currentBee;
-// returns a Scene that contains the HelloWorld as the only child
+
 +(id) scene;
--(void) move;
 
 @end

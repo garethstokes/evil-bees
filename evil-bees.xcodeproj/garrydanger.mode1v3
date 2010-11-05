@@ -272,7 +272,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
+									<integer>6</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -315,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Bee.m</string>
+								<string>HelloWorldScene.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Bee.m</string>
+										<string>HelloWorldScene.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7F7243F12843D0B00FDE9EC</string>
+										<string>E7F7245A12843F0100FDE9EC</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -335,8 +335,6 @@
 											<string>E7AF93021281622F00340531</string>
 											<string>E7AF93251281635A00340531</string>
 											<string>E7F721431282D46600FDE9EC</string>
-											<string>E7F721A31283735A00FDE9EC</string>
-											<string>E7F721A41283735A00FDE9EC</string>
 											<string>E7F7223E1284009F00FDE9EC</string>
 											<string>E7F7227712840BFA00FDE9EC</string>
 											<string>E7F7227812840BFA00FDE9EC</string>
@@ -346,10 +344,14 @@
 											<string>E7F7232312841DC500FDE9EC</string>
 											<string>E7F723311284213600FDE9EC</string>
 											<string>E7F7235D1284239F00FDE9EC</string>
-											<string>E7F7243812843CA400FDE9EC</string>
-											<string>E7F7243912843CA400FDE9EC</string>
 											<string>E7F7243D12843D0B00FDE9EC</string>
-											<string>E7F7243E12843D0B00FDE9EC</string>
+											<string>E7F7244E12843ED000FDE9EC</string>
+											<string>E7F7244F12843ED000FDE9EC</string>
+											<string>E7F7245012843ED000FDE9EC</string>
+											<string>E7F7245112843ED000FDE9EC</string>
+											<string>E7F7245212843ED000FDE9EC</string>
+											<string>E7F7245312843ED000FDE9EC</string>
+											<string>E7F7245412843ED000FDE9EC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -547,6 +549,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>E7F7245B12843F0100FDE9EC</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>E7F720C412828E7900FDE9EC</string>
 		<string>E7F720C612828E7900FDE9EC</string>
@@ -579,7 +582,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelloWorldScene.m</string>
+								<string>HelloWorldScene.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -648,7 +651,7 @@
 			<key>WindowToolGUID</key>
 			<string>E7AF92C712815FFC00340531</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
