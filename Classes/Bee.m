@@ -43,7 +43,7 @@
   
   [sheet addChild:sprite];  
   [sprite runAction:[CCRepeatForever actionWithAction: action]];
-  [self explore];
+  //[self explore];
   
   return [super init];
 }
@@ -62,19 +62,38 @@
   [m release];
 }
 
-- (void) moveTo:(CGPoint) point {
-  status = @"moving...";   
-  
-  id move = [[CCMoveTo actionWithDuration:2 position:point] retain];
-  id explore = [[CCCallFunc actionWithTarget:self selector:@selector(explore)] retain];
-  
-  id moves = [[NSMutableArray alloc] init];
-  [moves addObject:move];
-  [moves addObject:explore]; 
-  
-  [sprite runAction: [CCSequence actions:move, explore, nil]];
-  [move release];
-  [explore release];
+- (void)startPoint:(CGPoint)startPoint {
+  if (_sequence != nil) {
+    [_sequence stop];
+    [_sequence release];
+    _sequence = nil;
+  }
+  _startAction = [[CCMoveTo actionWithDuration:0.1 position:startPoint] retain];
+}
+
+- (void)addPoint:(CGPoint)nextPoint {
+  CCIntervalAction *nextAction = [CCMoveTo actionWithDuration:0.1 position:nextPoint];
+
+  if (_sequence == nil) {
+    NSLog(@"We've don't have a sequence yet");
+  } else {
+    NSLog(@"We've already have a sequence");
+  }
+
+  CCIntervalAction *prevAction;
+
+  if (_sequence == nil) {
+    prevAction = _startAction;
+  } else {
+    prevAction = _sequence;
+  }
+
+  NSLog(@"prevAction %@", prevAction);
+  _sequence = [[CCSequence actionOne:prevAction two: nextAction] retain];
+}
+
+- (void)move {
+  [[self sprite] runAction: _sequence];
 }
 
 @end

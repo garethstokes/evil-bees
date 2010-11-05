@@ -15,6 +15,9 @@
   CCSpriteSheet* sheet;
   CCAnimate* action;
   NSString* status;
+@private
+  CCIntervalAction *_startAction;
+  CCSequence *_sequence;
 }
 
 @property(nonatomic, retain) CCSprite* sprite;
