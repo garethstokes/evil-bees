@@ -10,6 +10,7 @@
 #import "HelloWorldScene.h"
 #import "CCTouchDispatcher.h"
 #import "Bee.h"
+#import "Flower.h"
 
 CCLabel* status;
 
@@ -42,13 +43,15 @@ CCLabel* status;
 	if( (self=[super init] )) {
     // create a TMX map
     CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"grass.tmx"];
-    [self addChild:map z:-1];
+    [self addChild:map z:-10];
     
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
                                               swallowsTouches:YES];
     _bees = [[NSMutableArray alloc] init];
+    _flowers = [[NSMutableArray alloc] init];
+    
     for (int i = 0; i < 1; i++) {
       Bee *bee = [[[Bee alloc] init] autorelease];
       [_bees addObject:bee];
@@ -62,10 +65,48 @@ CCLabel* status;
 		// position the label on the center of the screen
 		status.position = ccp(350, 20);
 		
-		// add the label as a child to this Layer
-	 	[self addChild: status];
+    // add the label as a child to this Layer
+	 	[self addChild:status];
+    
+    [self schedule: @selector(tick:) interval:0.5];
   }
 	return self;
+}
+
+- (void) tick: (ccTime) dt
+{
+  for (Bee* bee in _bees)
+  {
+    NSLog(@"flower count: %d", [_flowers count]);
+    for (Flower *f in _flowers)
+    {
+      NSLog(@"checking if bee is above");
+      if ([bee isAbove:f]) 
+      {
+        [self removeChild:f cleanup:YES];
+        [status  setString:@"remove flower"];
+      }
+    }
+  }
+  
+  if (rand() % 3 == 1) {
+    [status setString:@"set flower"];
+    
+    // calculate a position on the grid to set flower
+    // between x[1-15] and y[1-10]
+    
+    int x = rand() % 15;
+    int y = rand() % 10;
+    
+    Flower *flower = [[Flower alloc] init];
+    flower.position = ccp((x * 32) + 16, (y * 32) + 16);
+    [self addChild:flower z:-1];
+    [_flowers addObject:flower];
+    
+    return;
+  }
+  
+  [status setString:@"continue"];
 }
 
 -(void) draw

@@ -7,6 +7,7 @@
 //
 
 #import "cocos2d.h"
+#import "Flower.h"
 
 
 @interface Bee : NSObject {
@@ -33,5 +34,6 @@
 - (void) addPoint:(CGPoint)nextPoint;
 - (void) move;
 - (CCSequence *)generateDelegateSequence:(CGPoint)point;
+- (BOOL) isAbove: (Flower *) flower;
 
 @end

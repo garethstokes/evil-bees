@@ -223,6 +223,8 @@
 		DCCBF1BB0F6022AE0040855A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1BA0F6022AE0040855A /* OpenGLES.framework */; };
 		DCCBF1BD0F6022AE0040855A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1BC0F6022AE0040855A /* QuartzCore.framework */; };
 		DCCBF1BF0F6022AE0040855A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1BE0F6022AE0040855A /* UIKit.framework */; };
+		E71384B31284C2C000DA5A53 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = E71384B21284C2C000DA5A53 /* flower.png */; };
+		E71384CC1284C4ED00DA5A53 /* Flower.m in Sources */ = {isa = PBXBuildFile; fileRef = E71384CB1284C4ED00DA5A53 /* Flower.m */; };
 		E7AF92D61281609700340531 /* bees.zss in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D41281609700340531 /* bees.zss */; };
 		E7AF92D71281609700340531 /* bees.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D51281609700340531 /* bees.plist */; };
 		E7AF92E31281617F00340531 /* bees.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92E21281617F00340531 /* bees.png */; };
@@ -460,6 +462,9 @@
 		DCCBF1BA0F6022AE0040855A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		DCCBF1BC0F6022AE0040855A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DCCBF1BE0F6022AE0040855A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E71384B21284C2C000DA5A53 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		E71384CA1284C4ED00DA5A53 /* Flower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flower.h; sourceTree = "<group>"; };
+		E71384CB1284C4ED00DA5A53 /* Flower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flower.m; sourceTree = "<group>"; };
 		E7AF92D41281609700340531 /* bees.zss */ = {isa = PBXFileReference; lastKnownFileType = file; path = bees.zss; sourceTree = "<group>"; };
 		E7AF92D51281609700340531 /* bees.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bees.plist; sourceTree = "<group>"; };
 		E7AF92E21281617F00340531 /* bees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bees.png; sourceTree = "<group>"; };
@@ -564,6 +569,8 @@
 				1F3B9A2B0EF2145700286867 /* evil_beesAppDelegate.m */,
 				E7F720C81282A98C00FDE9EC /* Bee.h */,
 				E7F720C91282A98C00FDE9EC /* Bee.m */,
+				E71384CA1284C4ED00DA5A53 /* Flower.h */,
+				E71384CB1284C4ED00DA5A53 /* Flower.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -840,6 +847,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E71384B21284C2C000DA5A53 /* flower.png */,
 				E7F7245E1284B64C00FDE9EC /* grass.tmx */,
 				E7F7245C1284B61900FDE9EC /* grass_tiles.png */,
 				E7F723C312842E5100FDE9EC /* tmw_desert_spacing.png */,
@@ -1046,6 +1054,7 @@
 				E7F723C412842E5100FDE9EC /* tmw_desert_spacing.png in Resources */,
 				E7F7245D1284B61900FDE9EC /* grass_tiles.png in Resources */,
 				E7F7245F1284B64C00FDE9EC /* grass.tmx in Resources */,
+				E71384B31284C2C000DA5A53 /* flower.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1060,6 +1069,7 @@
 				1F3B9A2D0EF2145700286867 /* evil_beesAppDelegate.m in Sources */,
 				506EDC31102F528A00A389B3 /* HelloWorldScene.m in Sources */,
 				E7F720CA1282A98C00FDE9EC /* Bee.m in Sources */,
+				E71384CC1284C4ED00DA5A53 /* Flower.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

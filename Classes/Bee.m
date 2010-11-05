@@ -119,9 +119,23 @@
 }
 
 - (CCSequence *)generateDelegateSequence:(CGPoint)point {
-  CCIntervalAction *action = [CCMoveTo actionWithDuration:0.1 position:point];
+  CCIntervalAction *a = [CCMoveTo actionWithDuration:0.1 position:point];
   CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
-  return [CCSequence actions:action, movedDelegate, nil];
+  return [CCSequence actions:a, movedDelegate, nil];
 }
+
+- (BOOL) isAbove:(Flower *) flower
+{
+  CGPoint nodeSpace = [_sprite convertToNodeSpace:[flower position]];
+  CGSize size = [_sprite contentSize];
+  
+  if (nodeSpace.x > 0 && nodeSpace.x < size.width && nodeSpace.y > 0 && nodeSpace.y < size.height) {
+    return YES;
+  }            
+  
+  return NO;
+}
+
+
 
 @end

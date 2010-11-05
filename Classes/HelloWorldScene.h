@@ -16,6 +16,7 @@
 @interface HelloWorld : CCLayer {
 @private
   NSMutableArray *_bees;
+  NSMutableArray *_flowers;
   Bee *_currentBee;
 }
 
