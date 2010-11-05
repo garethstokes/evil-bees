@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="grass" tilewidth="32" tileheight="32">
+  <image source="grass_tiles.png"/>
+  <tile id="0">
+   <properties>
+    <property name="HasDirt" value="True"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="HasDirt" value="True"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="HasDirt" value="True"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="HasDirt" value="True"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="HasDirt" value="True"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="HasDirt" value="False"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="HasDirt" value="False"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="HasDirt" value="False"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="HasDirt" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="15" height="10">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5WQUQqAMAxDi5Tp1On9b2sGHYxga/14DJYmKVURWSZOsBqNtI6CYq+StoHLqI5XpwzWs3DvX2/Gv4MbHM7+Uca4YSNvSfjHDWvQq05exNss/33lZfv63APPm5PxWAIAAA==
+  </data>
+ </layer>
+</map>

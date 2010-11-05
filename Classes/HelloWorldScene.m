@@ -41,15 +41,15 @@ CCLabel* status;
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
     // create a TMX map
-    //CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"bee_desert.tmx"];
-    //[self addChild:map];
+    CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"grass.tmx"];
+    [self addChild:map z:-1];
     
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
                                                      priority:0
                                               swallowsTouches:YES];
     _bees = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 1; i++) {
       Bee *bee = [[[Bee alloc] init] autorelease];
       [_bees addObject:bee];
       // Add the sprite as a child of the sheet, so that it knows where to get its image data.
@@ -63,7 +63,7 @@ CCLabel* status;
 		status.position = ccp(350, 20);
 		
 		// add the label as a child to this Layer
-		[self addChild: status];
+	 	[self addChild: status];
   }
 	return self;
 }

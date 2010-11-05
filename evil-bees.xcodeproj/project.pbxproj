@@ -229,6 +229,8 @@
 		E7F720CA1282A98C00FDE9EC /* Bee.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F720C91282A98C00FDE9EC /* Bee.m */; };
 		E7F723B512842DE500FDE9EC /* bee_desert.tmx in Resources */ = {isa = PBXBuildFile; fileRef = E7F723B412842DE500FDE9EC /* bee_desert.tmx */; };
 		E7F723C412842E5100FDE9EC /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F723C312842E5100FDE9EC /* tmw_desert_spacing.png */; };
+		E7F7245D1284B61900FDE9EC /* grass_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F7245C1284B61900FDE9EC /* grass_tiles.png */; };
+		E7F7245F1284B64C00FDE9EC /* grass.tmx in Resources */ = {isa = PBXBuildFile; fileRef = E7F7245E1284B64C00FDE9EC /* grass.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -465,6 +467,8 @@
 		E7F720C91282A98C00FDE9EC /* Bee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee.m; sourceTree = "<group>"; };
 		E7F723B412842DE500FDE9EC /* bee_desert.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bee_desert.tmx; sourceTree = "<group>"; };
 		E7F723C312842E5100FDE9EC /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
+		E7F7245C1284B61900FDE9EC /* grass_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass_tiles.png; sourceTree = "<group>"; };
+		E7F7245E1284B64C00FDE9EC /* grass.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = grass.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -836,6 +840,8 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E7F7245E1284B64C00FDE9EC /* grass.tmx */,
+				E7F7245C1284B61900FDE9EC /* grass_tiles.png */,
 				E7F723C312842E5100FDE9EC /* tmw_desert_spacing.png */,
 				E7F723B412842DE500FDE9EC /* bee_desert.tmx */,
 				E7AF92E21281617F00340531 /* bees.png */,
@@ -1038,6 +1044,8 @@
 				E7AF92E31281617F00340531 /* bees.png in Resources */,
 				E7F723B512842DE500FDE9EC /* bee_desert.tmx in Resources */,
 				E7F723C412842E5100FDE9EC /* tmw_desert_spacing.png in Resources */,
+				E7F7245D1284B61900FDE9EC /* grass_tiles.png in Resources */,
+				E7F7245F1284B64C00FDE9EC /* grass.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
