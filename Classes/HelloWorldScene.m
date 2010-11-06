@@ -11,6 +11,7 @@
 #import "CCTouchDispatcher.h"
 #import "Bee.h"
 #import "Flower.h"
+#import "SimpleAudioEngine.h"
 
 CCLabel* status;
 
@@ -44,6 +45,9 @@ CCLabel* status;
     // create a TMX map
     CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"grass.tmx"];
     [self addChild:map z:-10];
+    
+    [[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.05];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"118_loop1_grandpa-is-scheming-again_0017.wav"];
     
     // register to receive targeted touch events
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
@@ -82,11 +86,14 @@ CCLabel* status;
     if ([flowerForRemoval toBeRemoved]) {
       [removeIndexes addObject:[NSNumber numberWithInt:i]];
     }
+    //[flowerForRemoval release];
   }
   
   for (NSNumber *i in removeIndexes) {
     [_flowers removeObjectAtIndex:[i intValue]];
   }
+  
+  [removeIndexes release];
   
   // check if bee is above a flower.
   for (Bee* bee in _bees)
@@ -122,8 +129,6 @@ CCLabel* status;
     f.position = ccp((x * 32) + 16, (y * 32) + 16);
     [_flowers addObject:f];
     [self addChild:f z:-1];
-    
-    //NSLog(@"flower isa %@", [f class]);
     
     return;
   }

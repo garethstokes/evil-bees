@@ -225,6 +225,11 @@
 		DCCBF1BF0F6022AE0040855A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1BE0F6022AE0040855A /* UIKit.framework */; };
 		E71384B31284C2C000DA5A53 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = E71384B21284C2C000DA5A53 /* flower.png */; };
 		E71384CC1284C4ED00DA5A53 /* Flower.m in Sources */ = {isa = PBXBuildFile; fileRef = E71384CB1284C4ED00DA5A53 /* Flower.m */; };
+		E713871112852F7C00DA5A53 /* 118_loop4_grandpa-is-scheming-again_0017.wav in Resources */ = {isa = PBXBuildFile; fileRef = E713871012852F7C00DA5A53 /* 118_loop4_grandpa-is-scheming-again_0017.wav */; };
+		E713876A128531FC00DA5A53 /* 118_loop1_grandpa-is-scheming-again_0017.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7138766128531FC00DA5A53 /* 118_loop1_grandpa-is-scheming-again_0017.wav */; };
+		E713876B128531FC00DA5A53 /* 118_loop2_grandpa-is-scheming-again_0017.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7138767128531FC00DA5A53 /* 118_loop2_grandpa-is-scheming-again_0017.wav */; };
+		E713876C128531FC00DA5A53 /* 118_loop3_grandpa-is-scheming-again_0017.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7138768128531FC00DA5A53 /* 118_loop3_grandpa-is-scheming-again_0017.wav */; };
+		E713876D128531FC00DA5A53 /* 118_loop5_grandpa-is-scheming-again_0017.wav in Resources */ = {isa = PBXBuildFile; fileRef = E7138769128531FC00DA5A53 /* 118_loop5_grandpa-is-scheming-again_0017.wav */; };
 		E7AF92D61281609700340531 /* bees.zss in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D41281609700340531 /* bees.zss */; };
 		E7AF92D71281609700340531 /* bees.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92D51281609700340531 /* bees.plist */; };
 		E7AF92E31281617F00340531 /* bees.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AF92E21281617F00340531 /* bees.png */; };
@@ -465,6 +470,11 @@
 		E71384B21284C2C000DA5A53 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
 		E71384CA1284C4ED00DA5A53 /* Flower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flower.h; sourceTree = "<group>"; };
 		E71384CB1284C4ED00DA5A53 /* Flower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flower.m; sourceTree = "<group>"; };
+		E713871012852F7C00DA5A53 /* 118_loop4_grandpa-is-scheming-again_0017.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118_loop4_grandpa-is-scheming-again_0017.wav"; sourceTree = "<group>"; };
+		E7138766128531FC00DA5A53 /* 118_loop1_grandpa-is-scheming-again_0017.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118_loop1_grandpa-is-scheming-again_0017.wav"; sourceTree = "<group>"; };
+		E7138767128531FC00DA5A53 /* 118_loop2_grandpa-is-scheming-again_0017.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118_loop2_grandpa-is-scheming-again_0017.wav"; sourceTree = "<group>"; };
+		E7138768128531FC00DA5A53 /* 118_loop3_grandpa-is-scheming-again_0017.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118_loop3_grandpa-is-scheming-again_0017.wav"; sourceTree = "<group>"; };
+		E7138769128531FC00DA5A53 /* 118_loop5_grandpa-is-scheming-again_0017.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "118_loop5_grandpa-is-scheming-again_0017.wav"; sourceTree = "<group>"; };
 		E7AF92D41281609700340531 /* bees.zss */ = {isa = PBXFileReference; lastKnownFileType = file; path = bees.zss; sourceTree = "<group>"; };
 		E7AF92D51281609700340531 /* bees.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bees.plist; sourceTree = "<group>"; };
 		E7AF92E21281617F00340531 /* bees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bees.png; sourceTree = "<group>"; };
@@ -847,6 +857,11 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E7138766128531FC00DA5A53 /* 118_loop1_grandpa-is-scheming-again_0017.wav */,
+				E7138767128531FC00DA5A53 /* 118_loop2_grandpa-is-scheming-again_0017.wav */,
+				E7138768128531FC00DA5A53 /* 118_loop3_grandpa-is-scheming-again_0017.wav */,
+				E7138769128531FC00DA5A53 /* 118_loop5_grandpa-is-scheming-again_0017.wav */,
+				E713871012852F7C00DA5A53 /* 118_loop4_grandpa-is-scheming-again_0017.wav */,
 				E71384B21284C2C000DA5A53 /* flower.png */,
 				E7F7245E1284B64C00FDE9EC /* grass.tmx */,
 				E7F7245C1284B61900FDE9EC /* grass_tiles.png */,
@@ -1055,6 +1070,11 @@
 				E7F7245D1284B61900FDE9EC /* grass_tiles.png in Resources */,
 				E7F7245F1284B64C00FDE9EC /* grass.tmx in Resources */,
 				E71384B31284C2C000DA5A53 /* flower.png in Resources */,
+				E713871112852F7C00DA5A53 /* 118_loop4_grandpa-is-scheming-again_0017.wav in Resources */,
+				E713876A128531FC00DA5A53 /* 118_loop1_grandpa-is-scheming-again_0017.wav in Resources */,
+				E713876B128531FC00DA5A53 /* 118_loop2_grandpa-is-scheming-again_0017.wav in Resources */,
+				E713876C128531FC00DA5A53 /* 118_loop3_grandpa-is-scheming-again_0017.wav in Resources */,
+				E713876D128531FC00DA5A53 /* 118_loop5_grandpa-is-scheming-again_0017.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
