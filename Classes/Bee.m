@@ -102,15 +102,19 @@
 
 - (void)move {
   if (_sequence != nil) {
-    [_sprite runAction: _sequence];
+    CCIntervalAction *exploreAction = [[CCCallFunc actionWithTarget:self selector:@selector(explore)] retain];
+    CCSequence *sequence = [[CCSequence actionOne:_sequence two:exploreAction] retain];
+    [_sprite runAction: sequence];
   }
 }
 
 - (void)moved {
   [_path removeObjectAtIndex:0];
 
+  
   if ([_path count] == 0) {
-    [self explore];
+    NSLog(@"finished, starting to explore");
+    //[self explore];
     return;
   }
 

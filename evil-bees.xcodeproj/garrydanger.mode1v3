@@ -265,14 +265,14 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>2D500B1D0D5A766B00DBA0E3</string>
-								<string>50F414EB1069373D002A0D5E</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>6</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71387891285336600DA5A53</string>
+										<string>E71387F61285427C00DA5A53</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -349,15 +349,15 @@
 											<string>E71384F81284C6EB00DA5A53</string>
 											<string>E71385411284D1D600DA5A53</string>
 											<string>E71385421284D1D600DA5A53</string>
-											<string>E713856D1284D7C400DA5A53</string>
 											<string>E713862E1284E26100DA5A53</string>
 											<string>E713862F1284E26100DA5A53</string>
 											<string>E71386381284E27600DA5A53</string>
 											<string>E713868B1284E5F100DA5A53</string>
-											<string>E71386E21284F87900DA5A53</string>
-											<string>E71386E31284F87900DA5A53</string>
-											<string>E713875D1285313900DA5A53</string>
-											<string>E713875E1285313900DA5A53</string>
+											<string>E71387A212853BB500DA5A53</string>
+											<string>E71387DE1285411B00DA5A53</string>
+											<string>E71387E01285411B00DA5A53</string>
+											<string>E71387F41285427C00DA5A53</string>
+											<string>E71387F51285427C00DA5A53</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -555,13 +555,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E713878A1285336600DA5A53</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>E71384751284BC5C00DA5A53</string>
 		<string>E713846C1284BC3800DA5A53</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>E7AF92C712815FFC00340531</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/garrydanger/projects/evil-bees/evil-bees.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

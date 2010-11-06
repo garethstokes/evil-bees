@@ -77,9 +77,8 @@ CCLabel* status;
 	return self;
 }
 
-- (void) tick: (ccTime) dt
+- (void) removeFlowersMarkedForRemoval
 {
-  // removed flowers marked for removal
   NSMutableArray *removeIndexes = [[NSMutableArray alloc] init];
   for (int i = 0; i < [_flowers count]; i++) {
     Flower *flowerForRemoval = [_flowers objectAtIndex:i];
@@ -94,8 +93,10 @@ CCLabel* status;
   }
   
   [removeIndexes release];
-  
-  // check if bee is above a flower.
+}
+
+- (void) checkIfBeIsAboveFlower
+{
   for (Bee* bee in _bees)
   {
     for (Flower *flower in _flowers)
@@ -108,20 +109,20 @@ CCLabel* status;
           [flower markForRemoval];
         }
       }
-      else if([bee isAbove:flower]) 
+      else if([bee isAbove:flower] && [flower hasPollen]) 
       {
         [bee attachTo:flower]; 
       }
       
     }
   }
-  
-  // set a flower if we need to. 
+}
+
+- (void) rollDiceToSetRandomFlower
+{
   if (rand() % 15 == 1) {
     
     // calculate a position on the grid to set flower
-    // between x[1-15] and y[1-10]
-    
     int x = rand() % 15;
     int y = rand() % 10;
     
@@ -129,9 +130,21 @@ CCLabel* status;
     f.position = ccp((x * 32) + 16, (y * 32) + 16);
     [_flowers addObject:f];
     [self addChild:f z:-1];
-    
+    [f release];
     return;
   }
+}
+
+- (void) tick: (ccTime) dt
+{
+  // removed flowers marked for removal
+  [self removeFlowersMarkedForRemoval];
+  
+  // check if bee is above a flower.
+  [self checkIfBeIsAboveFlower];
+  
+  // set a flower if we need to. 
+  [self rollDiceToSetRandomFlower];
 }
 
 -(void) draw

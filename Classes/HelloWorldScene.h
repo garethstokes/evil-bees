@@ -23,5 +23,8 @@
 @property (nonatomic, retain) Bee *currentBee;
 
 +(id) scene;
+- (void) removeFlowersMarkedForRemoval;
+- (void) checkIfBeIsAboveFlower;
+- (void) rollDiceToSetRandomFlower;
 
 @end

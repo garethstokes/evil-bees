@@ -17,6 +17,7 @@
   Bee *_currentBee;
   BOOL _toBeRemoved;
   int _beeTicks;
+  BOOL _hasPollen;
 }
 
 - (Flower *)initBleh;
@@ -25,5 +26,6 @@
 - (BOOL) hasBee;
 - (void) markForRemoval;
 - (BOOL) toBeRemoved;
+- (BOOL) hasPollen;
 
 @end

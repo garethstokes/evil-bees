@@ -17,6 +17,7 @@
   if ((self = [super initWithFile:@"flower.png"])) {
     _hasBee = NO;
     _toBeRemoved = NO;
+    _hasPollen = YES;
   }
   return self;
 }
@@ -32,21 +33,24 @@
 - (BOOL) removeBeeIfHasFinished
 {
   NSLog(@"bee ticks: %d", _beeTicks);
+  _hasPollen = NO;
   
   if (_beeTicks < 6) {
     ++_beeTicks;
     return NO;
   }
   
-  _currentBee.points++;
   [_currentBee explore];
+  _currentBee.points++;
   _currentBee = nil;
   _hasBee = NO;
+  
   return YES;
 }
 
 - (BOOL) hasBee { return _hasBee; }
 - (void) markForRemoval { _toBeRemoved = YES; }
 - (BOOL) toBeRemoved { return _toBeRemoved; }
+- (BOOL) hasPollen { return _hasPollen; }
 
 @end
