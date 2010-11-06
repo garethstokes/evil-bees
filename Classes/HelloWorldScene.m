@@ -3,7 +3,7 @@
 //  evil-bees
 //
 //  Created by gareth stokes on 3/11/10.
-//  Copyright digital five 2010. All rights reserved.
+//  Copyright fact equals true 2010. All rights reserved.
 //
 
 // Import the interfaces
