@@ -20,6 +20,7 @@
   CCIntervalAction *_startSequence;
   CCSequence *_sequence;
   NSMutableArray *_path;
+  int _points;
 }
 
 @property(nonatomic, retain) CCSprite* sprite;
@@ -28,6 +29,7 @@
 @property(nonatomic, retain) CCAnimate* action;
 @property(nonatomic, retain) NSString* status;
 @property(nonatomic, retain) NSMutableArray* path;
+@property(nonatomic) int points;
 
 - (void) explore;
 - (void) startPoint:(CGPoint)startPoint;
@@ -35,5 +37,7 @@
 - (void) move;
 - (CCSequence *)generateDelegateSequence:(CGPoint)point;
 - (BOOL) isAbove: (Flower *) flower;
+- (void) stop;
+- (void) attachTo: (Flower *) flower;
 
 @end

@@ -52,7 +52,7 @@ CCLabel* status;
     _bees = [[NSMutableArray alloc] init];
     _flowers = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 2; i++) {
       Bee *bee = [[[Bee alloc] init] autorelease];
       [_bees addObject:bee];
       // Add the sprite as a child of the sheet, so that it knows where to get its image data.
@@ -75,22 +75,42 @@ CCLabel* status;
 
 - (void) tick: (ccTime) dt
 {
-  for (Bee* bee in _bees)
-  {
-    NSLog(@"flower count: %d", [_flowers count]);
-    for (Flower *f in _flowers)
-    {
-      NSLog(@"checking if bee is above");
-      if ([bee isAbove:f]) 
-      {
-        [self removeChild:f cleanup:YES];
-        [status  setString:@"remove flower"];
-      }
+  // removed flowers marked for removal
+  NSMutableArray *removeIndexes = [[NSMutableArray alloc] init];
+  for (int i = 0; i < [_flowers count]; i++) {
+    Flower *flowerForRemoval = [_flowers objectAtIndex:i];
+    if ([flowerForRemoval toBeRemoved]) {
+      [removeIndexes addObject:[NSNumber numberWithInt:i]];
     }
   }
   
-  if (rand() % 3 == 1) {
-    [status setString:@"set flower"];
+  for (NSNumber *i in removeIndexes) {
+    [_flowers removeObjectAtIndex:[i intValue]];
+  }
+  
+  // check if bee is above a flower.
+  for (Bee* bee in _bees)
+  {
+    for (Flower *flower in _flowers)
+    {
+      if ([flower hasBee]) {
+        
+        if ([flower removeBeeIfHasFinished])
+        {
+          [self removeChild:flower cleanup:YES];
+          [flower markForRemoval];
+        }
+      }
+      else if([bee isAbove:flower]) 
+      {
+        [bee attachTo:flower]; 
+      }
+      
+    }
+  }
+  
+  // set a flower if we need to. 
+  if (rand() % 15 == 1) {
     
     // calculate a position on the grid to set flower
     // between x[1-15] and y[1-10]
@@ -98,15 +118,15 @@ CCLabel* status;
     int x = rand() % 15;
     int y = rand() % 10;
     
-    Flower *flower = [[Flower alloc] init];
-    flower.position = ccp((x * 32) + 16, (y * 32) + 16);
-    [self addChild:flower z:-1];
-    [_flowers addObject:flower];
+    Flower *f = [[Flower alloc] initBleh];
+    f.position = ccp((x * 32) + 16, (y * 32) + 16);
+    [_flowers addObject:f];
+    [self addChild:f z:-1];
+    
+    //NSLog(@"flower isa %@", [f class]);
     
     return;
   }
-  
-  [status setString:@"continue"];
 }
 
 -(void) draw
@@ -114,14 +134,12 @@ CCLabel* status;
   for (Bee *bee in _bees) {
     NSArray *path = [bee path];
     if ([path count] == 0) continue;
-    
-    [status setString:[bee status]];
 
-    for (int i = 0; i < [path count]; i++) {
-      NSValue* val = [path objectAtIndex:i];
-      CGPoint p = [val CGPointValue];
-      ccDrawPoint(p);
-    }
+    //for (int i = 0; i < [path count]; i++) {
+//      NSValue* val = [path objectAtIndex:i];
+//      CGPoint p = [val CGPointValue];
+//      ccDrawPoint(p);
+//    }
     
     CGPoint last = ccp(0, 0);
     for (int i = 0; i < [path count]; i++) {
@@ -134,6 +152,13 @@ CCLabel* status;
       last = p;
     }
   }
+  
+  int total = 0;
+  for (Bee *bee in _bees)
+  {
+    total = total + [bee points];
+  }
+  [status setString:[NSString stringWithFormat:@"points: %d", total]];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  

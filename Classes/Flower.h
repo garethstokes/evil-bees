@@ -8,9 +8,22 @@
 
 #import "cocos2d.h"
 
+@class Bee;
 
 @interface Flower : CCSprite {
-
+  BOOL _hasBee;
+  
+@private
+  Bee *_currentBee;
+  BOOL _toBeRemoved;
+  int _beeTicks;
 }
+
+- (Flower *)initBleh;
+- (void) add:(Bee *) bee;
+- (BOOL) removeBeeIfHasFinished;
+- (BOOL) hasBee;
+- (void) markForRemoval;
+- (BOOL) toBeRemoved;
 
 @end

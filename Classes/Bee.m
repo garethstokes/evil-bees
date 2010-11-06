@@ -17,36 +17,40 @@
 @synthesize action;
 @synthesize status;
 @synthesize path=_path;
+@synthesize points=_points;
 
 - (id) init {
-  // Create a SpriteSheet -- just a big image which is prepared to 
-  // be carved up into smaller images as needed
-  sheet = [CCSpriteSheet spriteSheetWithFile:@"bees.png" capacity:50];
+  if ((self=[super init])) {
+    // Create a SpriteSheet -- just a big image which is prepared to 
+    // be carved up into smaller images as needed
+    sheet = [CCSpriteSheet spriteSheetWithFile:@"bees.png" capacity:50];
+    
+    // Load sprite frames, which are just a bunch of named rectangle 
+    // definitions that go along with the image in a sprite sheet
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"bees.plist"];
+    
+    // Finally, create a sprite, using the name of a frame in our frame cache.
+    _sprite = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
+    _sprite.position = ccp(rand() % 480, rand() % 320);
+    
+    NSMutableArray* idleFrames = [NSMutableArray array];
+    [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee1.png"]];
+    [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee2.png"]];
+    
+    animation = [CCAnimation animationWithName:@"dance" delay:0.1f frames:idleFrames];
+    
+    action = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]] retain];
+    //playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(action)] retain];
+    
+    _path = [[NSMutableArray alloc] init];
+    
+    _points = 0;
   
-  // Load sprite frames, which are just a bunch of named rectangle 
-  // definitions that go along with the image in a sprite sheet
-  [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"bees.plist"];
-  
-  // Finally, create a sprite, using the name of a frame in our frame cache.
-  _sprite = [CCSprite spriteWithSpriteFrameName:@"bee1.png"];
-  _sprite.position = ccp(rand() % 480, rand() % 320);
-  
-  NSMutableArray* idleFrames = [NSMutableArray array];
-  [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee1.png"]];
-  [idleFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"bee2.png"]];
-  
-  animation = [CCAnimation animationWithName:@"dance" delay:0.1f frames:idleFrames];
-  
-  action = [[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]] retain];
-  //playIdleAction = [[CCCallFunc actionWithTarget:self selector:@selector(action)] retain];
-  
-  _path = [[NSMutableArray alloc] init];
-  
-  [sheet addChild:_sprite];  
-  [_sprite runAction:[CCRepeatForever actionWithAction: action]];
-  [self explore];
-  
-  return [super init];
+    [sheet addChild:_sprite];  
+    [_sprite runAction:[CCRepeatForever actionWithAction: action]];
+    [self explore];
+  }
+  return self;
 }
 
 - (void) explore {
@@ -136,6 +140,18 @@
   return NO;
 }
 
+- (void) stop {
+  [_path removeAllObjects];
+  [_sprite stopAllActions];
+  [_sprite runAction:[CCRepeatForever actionWithAction: action]];
+}
+
+- (void) attachTo:(Flower *)flower
+{
+  [self stop];
+  [_sprite runAction:[CCMoveTo actionWithDuration:0.1 position:[flower position]]];
+  [flower add:self];
+}
 
 
 @end
