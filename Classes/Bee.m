@@ -8,6 +8,20 @@
 
 #import "Bee.h"
 
+const float BEE_SPEED = 0.015;
+
+float getBeeTime(CGPoint a, CGPoint b)
+{
+  // the distance between two vectors is the sqrt of (a * a) + (b * b)
+  float x = fabs(b.x - a.x);
+  float y = fabs(b.y - a.y);
+  
+  float distance = sqrt((x *  x) + (y * y));
+  
+  float time = fabsf(BEE_SPEED * distance);
+  NSLog(@"time: %f", time);
+  return time;
+}
 
 @implementation Bee
 
@@ -59,7 +73,9 @@
   
   [_sprite setFlipX:currentPosition.x > random_point.x];
   
-  id a = [CCMoveTo actionWithDuration:5 position:random_point];
+  float time = getBeeTime(currentPosition, random_point);
+  
+  id a = [CCMoveTo actionWithDuration:time position:random_point];
   id m = [[CCCallFunc actionWithTarget:self selector:@selector(explore)] retain];
   [_sprite runAction: [CCSequence actions:a, m, nil]];
   [m release];
@@ -117,7 +133,9 @@
 }
 
 - (CCSequence *)generateDelegateSequence:(CGPoint)point {
-  CCIntervalAction *a = [CCMoveTo actionWithDuration:0.1 position:point];
+  CGPoint last = [(NSValue *)[_path lastObject] CGPointValue];
+  float time = getBeeTime(last, point);
+  CCIntervalAction *a = [CCMoveTo actionWithDuration:time position:point];
   CCIntervalAction *movedDelegate = [CCCallFunc actionWithTarget:self selector:@selector(moved)];
   return [CCSequence actions:a, movedDelegate, nil];
 }

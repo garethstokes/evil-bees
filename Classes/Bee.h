@@ -9,7 +9,6 @@
 #import "cocos2d.h"
 #import "Flower.h"
 
-
 @interface Bee : NSObject {
   CCAnimation* animation;
   CCSpriteSheet* sheet;
