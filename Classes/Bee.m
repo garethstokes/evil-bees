@@ -15,7 +15,6 @@
 @synthesize animation;
 @synthesize sheet;
 @synthesize action;
-@synthesize status;
 @synthesize path=_path;
 @synthesize points=_points;
 
@@ -54,7 +53,6 @@
 }
 
 - (void) explore {
-  status = @"exploring...";
   
   CGPoint currentPosition = [_sprite position];
   CGPoint random_point = ccp(rand() % 480, rand() % 320);
@@ -109,19 +107,11 @@
 }
 
 - (void)moved {
+  if ([_path count] == 0) return;
   [_path removeObjectAtIndex:0];
-
-  
-  if ([_path count] == 0) {
-    NSLog(@"finished, starting to explore");
-    //[self explore];
-    return;
-  }
 
   CGPoint lastPosition = [(NSValue *)[_path objectAtIndex:0] CGPointValue];
   CGPoint currentPosition = [_sprite position];
-  
-  //NSLog(@"currentPosition.x: %f, lastPosition.x: %f", 
   
   [_sprite setFlipX:currentPosition.x > lastPosition.x];
 }
@@ -145,13 +135,38 @@
 }
 
 - (void) stop {
-  [_path removeAllObjects];
+  //[_path removeAllObjects];
   [_sprite stopAllActions];
   [_sprite runAction:[CCRepeatForever actionWithAction: action]];
 }
 
+- (void) play {
+  if ([_path count] == 0) 
+  {
+    [self explore];
+    return;
+  }
+  
+  NSLog(@"playing bee with path count: ", [_path count]);
+  
+  NSMutableArray *path = [_path copy];
+  CGPoint start = [(NSValue *)[path objectAtIndex:0] CGPointValue];
+  NSLog(@"point x:%f y:%f", start.x, start.y);
+  [self startPoint:start];
+  
+  for (int i = 1; i < [path count]; i++) 
+  {
+    CGPoint point = [(NSValue *)[path objectAtIndex:i] CGPointValue];
+    NSLog(@"point x:%f y:%f", point.x, point.y);
+    [self addPoint:point];
+  }
+  
+  [self move];
+}
+
 - (void) attachTo:(Flower *)flower
 {
+  // push actions on a stack
   [self stop];
   [_sprite runAction:[CCMoveTo actionWithDuration:0.1 position:[flower position]]];
   [flower add:self];

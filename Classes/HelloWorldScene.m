@@ -179,19 +179,19 @@ CCLabel* status;
   [status setString:[NSString stringWithFormat:@"points: %d", total]];
 }
 
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {  
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event 
+{  
   CGPoint point = [touch locationInView:[touch view]];
-//  NSLog(@"ccTouchBegan %f, %f", point.y, point.x);
-    for (Bee *bee in _bees) {
-
+    
+  for (Bee *bee in _bees) 
+  {
     CCSprite *sprite = [bee sprite];
-
     CGPoint beePoint = [sprite convertTouchToNodeSpace:touch];
 
-//    NSLog(@"convertTouchToNodeSpace %f, %f", beePoint.x, beePoint.y);
     CGSize size = [sprite contentSize];
     
-    if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) {
+    if (beePoint.x > 0 && beePoint.x < size.width && beePoint.y > 0 && beePoint.y < size.height) 
+    {
       [bee startPoint:CGPointMake(point.y, point.x)];
       _currentBee = bee;
       break;
@@ -207,8 +207,6 @@ CCLabel* status;
   }
   
   CGPoint point = [touch locationInView:[touch view]];
-  //NSLog(@"ccTouchMoved %f, %f", point.y, point.x);
-  
   [_currentBee addPoint:CGPointMake(point.y, point.x)];
 }
 

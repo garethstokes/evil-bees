@@ -14,7 +14,6 @@
   CCAnimation* animation;
   CCSpriteSheet* sheet;
   CCAnimate* action;
-  NSString* status;
 @private
   CCSprite* _sprite;
   CCIntervalAction *_startSequence;
@@ -27,7 +26,6 @@
 @property(nonatomic, retain) CCAnimation* animation;
 @property(nonatomic, retain) CCSpriteSheet* sheet;
 @property(nonatomic, retain) CCAnimate* action;
-@property(nonatomic, retain) NSString* status;
 @property(nonatomic, retain) NSMutableArray* path;
 @property(nonatomic) int points;
 
@@ -38,6 +36,7 @@
 - (CCSequence *)generateDelegateSequence:(CGPoint)point;
 - (BOOL) isAbove: (Flower *) flower;
 - (void) stop;
+- (void) play;
 - (void) attachTo: (Flower *) flower;
 
 @end

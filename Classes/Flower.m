@@ -40,7 +40,7 @@
     return NO;
   }
   
-  [_currentBee explore];
+  [_currentBee play];
   _currentBee.points++;
   _currentBee = nil;
   _hasBee = NO;

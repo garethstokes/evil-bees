@@ -271,7 +271,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>10</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -314,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Flower.m</string>
+								<string>Bee.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Flower.m</string>
+										<string>Bee.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E713882512855BBC00DA5A53</string>
+										<string>E71388581286709700DA5A53</string>
 										<key>history</key>
 										<array>
 											<string>E7AF93001281622F00340531</string>
@@ -351,13 +351,13 @@
 											<string>E713862F1284E26100DA5A53</string>
 											<string>E71386381284E27600DA5A53</string>
 											<string>E713881D12855BBC00DA5A53</string>
-											<string>E713881E12855BBC00DA5A53</string>
 											<string>E713881F12855BBC00DA5A53</string>
 											<string>E713882012855BBC00DA5A53</string>
-											<string>E713882112855BBC00DA5A53</string>
-											<string>E713882212855BBC00DA5A53</string>
-											<string>E713882312855BBC00DA5A53</string>
-											<string>E713882412855BBC00DA5A53</string>
+											<string>E713882C1286628500DA5A53</string>
+											<string>E713883C1286650A00DA5A53</string>
+											<string>E71388461286676100DA5A53</string>
+											<string>E71388501286702100DA5A53</string>
+											<string>E71388511286702100DA5A53</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -555,14 +555,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E713882612855BBC00DA5A53</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>E71384751284BC5C00DA5A53</string>
 		<string>E713846C1284BC3800DA5A53</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7AF92C712815FFC00340531</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/garrydanger/projects/evil-bees/evil-bees.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>-3 124 1680 903 0 0 1680 1028 </string>
@@ -581,14 +580,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>HelloWorldScene.m</string>
+								<string>Bee.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -605,6 +602,8 @@
 							<string>364pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -657,7 +656,7 @@
 			<key>WindowToolGUID</key>
 			<string>E7AF92C712815FFC00340531</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
