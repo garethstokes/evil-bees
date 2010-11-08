@@ -72,7 +72,7 @@ CCLabel* status;
     // add the label as a child to this Layer
 	 	[self addChild:status];
     
-    [self schedule: @selector(tick:) interval:0.5];
+    [self schedule: @selector(tick:) interval:0.25];
   }
 	return self;
 }
@@ -88,8 +88,10 @@ CCLabel* status;
     //[flowerForRemoval release];
   }
   
+  int x = 0;
   for (NSNumber *i in removeIndexes) {
-    [_flowers removeObjectAtIndex:[i intValue]];
+    [_flowers removeObjectAtIndex:[(i-0) intValue]];
+    x++;
   }
   
   [removeIndexes release];
@@ -105,7 +107,10 @@ CCLabel* status;
         
         if ([flower removeBeeIfHasFinished])
         {
-          [self removeChild:flower cleanup:YES];
+          // may be a memory leak;
+          [self removeChild:flower cleanup:YES]; 
+          
+          flower.visible = NO;
           [flower markForRemoval];
         }
       }
@@ -152,12 +157,6 @@ CCLabel* status;
   for (Bee *bee in _bees) {
     NSArray *path = [bee path];
     if ([path count] == 0) continue;
-
-    //for (int i = 0; i < [path count]; i++) {
-//      NSValue* val = [path objectAtIndex:i];
-//      CGPoint p = [val CGPointValue];
-//      ccDrawPoint(p);
-//    }
     
     CGPoint last = ccp(0, 0);
     for (int i = 0; i < [path count]; i++) {
@@ -227,3 +226,4 @@ CCLabel* status;
 	[super dealloc];
 }
 @end
+	

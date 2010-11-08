@@ -32,7 +32,6 @@
 
 - (BOOL) removeBeeIfHasFinished
 {
-  NSLog(@"bee ticks: %d", _beeTicks);
   _hasPollen = NO;
   
   if (_beeTicks < 6) {

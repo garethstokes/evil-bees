@@ -44,13 +44,13 @@
   </tile>
   <tile id="9">
    <properties>
-    <property name="HasDirt" value=""/>
+    <property name="HasDirt" value="False"/>
    </properties>
   </tile>
  </tileset>
  <layer name="Tile Layer 1" width="15" height="10">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5WQUQqAMAxDi5Tp1On9b2sGHYxga/14DJYmKVURWSZOsBqNtI6CYq+StoHLqI5XpwzWs3DvX2/Gv4MbHM7+Uca4YSNvSfjHDWvQq05exNss/33lZfv63APPm5PxWAIAAA==
+   H4sIAAAAAAAAA32Q4QqAMAiEZZi1avX+b5sDheNw/fgYnNPzVBFpwO3swQBdHXM2QInDeYJONaN+C73Bi15Kvsjqv1KNdS109ktO53Uu2rHy4Qx5w0E9tsiI5A07aLgHz6syIrlH5c3+PC97//JWd5lzPhV0vxFYAgAA
   </data>
  </layer>
 </map>

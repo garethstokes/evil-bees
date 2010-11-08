@@ -8,7 +8,7 @@
 
 #import "Bee.h"
 
-const float BEE_SPEED = 0.015;
+const float BEE_SPEED = 0.0095;
 
 float getBeeTime(CGPoint a, CGPoint b)
 {
@@ -19,7 +19,7 @@ float getBeeTime(CGPoint a, CGPoint b)
   float distance = sqrt((x *  x) + (y * y));
   
   float time = fabsf(BEE_SPEED * distance);
-  NSLog(@"time: %f", time);
+  //NSLog(@"time: %f", time);
   return time;
 }
 
@@ -165,20 +165,25 @@ float getBeeTime(CGPoint a, CGPoint b)
     return;
   }
   
-  NSLog(@"playing bee with path count: ", [_path count]);
+  if ([_path count] < 3) {
+    [_path removeAllObjects];
+    [self explore];
+    return;
+  }
+  
+  //NSLog(@"playing bee with path count: ", [_path count]);
   
   NSMutableArray *path = [_path copy];
   CGPoint start = [(NSValue *)[path objectAtIndex:0] CGPointValue];
-  NSLog(@"point x:%f y:%f", start.x, start.y);
   [self startPoint:start];
   
   for (int i = 1; i < [path count]; i++) 
   {
     CGPoint point = [(NSValue *)[path objectAtIndex:i] CGPointValue];
-    NSLog(@"point x:%f y:%f", point.x, point.y);
     [self addPoint:point];
   }
   
+  NSLog(@"bee path reconfigured (count: %i), restarting now...", [path count]);
   [self move];
 }
 
